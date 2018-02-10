@@ -1,0 +1,8 @@
+{% extends 'general_view/base.html' %}
+
+{% block content %}
+  <h2>categories</h2>
+  {% for category in category_list%}
+          {{ category.name}}
+  {% endfor %}
+{% endblock %}

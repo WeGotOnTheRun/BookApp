@@ -1,0 +1,15 @@
+{% extends 'general_view/base.html' %}
+
+{% block content %}
+  <h2>Books</h2>
+      <p>Name: {{author.name}}</p>
+      <p>Born at: {{author.born_at}}</p>
+      <p>Died at: {{author.died_at}}</p>
+      <p>Bio: {{author.bio}}</p>
+      <p>contact: {{author.contact}}</p>
+      <img src="{{ author.picture.url }}" alt="can't load image" width="160" class="img-responsive img-circle mt mb">
+      <strong>Books: </strong>
+      {% for book in mybooks %}
+        <a href="{% url 'library:BookDetail' book.Author.pk %}">{{ book.name}}</a>
+      {% endfor %}
+{% endblock %}

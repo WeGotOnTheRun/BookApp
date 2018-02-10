@@ -1,0 +1,10 @@
+{% extends 'general_view/base.html' %}
+
+{% block content %}
+  <h2>category</h2>
+      <p>Name: {{category.name}}</p>
+      <strong>Books: </strong>
+      {% for book in mybooks %}
+        <a href="{% url 'library:BookDetail' book.Category.pk %}">{{ book.name}}</a>
+      {% endfor %}
+{% endblock %}

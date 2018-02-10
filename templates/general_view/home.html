@@ -1,0 +1,10 @@
+{% extends 'general_view/base.html' %}
+
+{% block content %}
+  <h2>welcome again {{ user.username }}</h2>
+  <img src="{{ user.profile.picture.url }}" alt="can't load image" width="160" class="img-responsive img-circle mt mb">
+  <p>first name: {{ user.first_name }}</p>
+  <p>last name: {{ user.last_name }}</p>
+  <p>Email: {{ user.email }}</p>
+  <p>birthdate: {{ user.profile.birth_date }}</p>
+{% endblock %}
