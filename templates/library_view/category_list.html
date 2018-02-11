@@ -3,6 +3,6 @@
 {% block content %}
   <h2>categories</h2>
   {% for category in category_list%}
-          {{ category.name}}
+      <a href="{%url 'library:CategoryDetail' category.pk%}">{{ category.name}}</a></br>
   {% endfor %}
 {% endblock %}

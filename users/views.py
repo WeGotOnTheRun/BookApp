@@ -32,6 +32,7 @@ def sign_up(request):
 def home(request):
     db_helper.ini_countries()
     return render(request, 'general_view/home.html')
+
 #
 # @login_required
 # def profile(request):
