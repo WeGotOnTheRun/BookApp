@@ -13,6 +13,5 @@ urlpatterns = [
     path('authors/<int:pk>', views.AuthorDetailView.as_view(), name='AuthorDetail'),
 
     path('categories/', views.CategoryListView, name='CategoryList'),
-    # re_path(r'^categories/(?P<category_id>[0-9]+)$', views.CategoryDetailView, name='CategoryDetail'),
-
+    path('categories/<int:pk>', views.CategoryDetailView.as_view(), name='CategoryDetail'),
 ]

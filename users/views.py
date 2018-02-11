@@ -1,13 +1,16 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth import login, logout, authenticate
 from .forms import *
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import Http404
+from django.shortcuts import Http404,HttpResponseRedirect, reverse
 from django.contrib.auth.models import User
 from helper import db_helper
+from django1 import settings
+from django.contrib.auth.views import login as auth_login
+from django.contrib.auth import authenticate, login
 
 # hash this line after using it.
 # db_helper.ini_countries()
+
 
 def sign_up(request):
     if request.method == 'POST':
@@ -28,9 +31,31 @@ def sign_up(request):
     return render(request, 'user_view/signup.html', {'form': form})
 
 
+def log_in(request):
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        user = authenticate(username=username, password=password)
+        if user.is_active:
+            if user.is_staff:
+                return redirect('%s?next=/admin/' % settings.LOGIN_REDIRECT_URL)
+            elif not request.user.is_staff:
+                print('is not staff')
+        else:
+            login(request, user)
+            return redirect('/')
+
+        return auth_login(request, {'template_name': 'login.html'})
+
+
+
 @login_required
 def home(request):
     db_helper.ini_countries()
+    if request.user.is_active:
+        if request.user is not None and request.user.is_superuser and request.user.is_staff:
+            login(request, request.user)
+            return HttpResponseRedirect('/admin/')
     return render(request, 'general_view/home.html')
 #
 # @login_required
