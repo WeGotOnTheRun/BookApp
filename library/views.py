@@ -47,6 +47,11 @@ def CategoryListView(request):
     return render(request, 'library_view/category_list.html', {'category_list': category_list})
 
 
+# class CategoryListView(ListView):
+#     model = Author
+#     template_name = 'library_view/category_list.html'
+
+
 class CategoryDetailView(DetailView):
     model = Category
     template_name = 'library_view/category_detail.html'

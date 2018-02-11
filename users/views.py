@@ -1,15 +1,28 @@
 from django.shortcuts import render, redirect
 from .forms import *
+from .models import *
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import Http404,HttpResponseRedirect, reverse
-from django.contrib.auth.models import User
 from helper import db_helper
 from django1 import settings
 from django.contrib.auth.views import login as auth_login
 from django.contrib.auth import authenticate, login
+from django.contrib import admin
+from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
+from django.contrib.auth.models import User
 
 # hash this line after using it.
 # db_helper.ini_countries()
+
+
+class ExtendUser(admin.StackedInline):
+    model = Profile
+    can_delete = False
+    Verbose_name = 'profile'
+
+
+class UserAdmin(BaseUserAdmin):
+    inlines = (ExtendUser,)
 
 
 def sign_up(request):
@@ -28,7 +41,7 @@ def sign_up(request):
             return redirect('home')
     else:
         form = SignUp()
-    return render(request, 'user_view/signup.html', {'form': form})
+    return render(request, 'general_view/signup.html', {'form': form})
 
 
 def log_in(request):
