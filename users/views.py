@@ -38,12 +38,13 @@ def sign_up(request):
             user = authenticate(username=user.username, password=password)
             login(request, user)
             print('done')
-            return redirect('home')
+            return redirect('library:index')
     else:
         form = SignUp()
     return render(request, 'general_view/signup.html', {'form': form})
 
 
+@login_required(redirect_field_name='ADMIN_LOGIN_REDIRECT_URL')
 def log_in(request):
     if request.method == 'POST':
         username = request.POST.get('username')
