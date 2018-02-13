@@ -18,8 +18,8 @@ class Profile(models.Model):
         return '{} {}'.format(self.picture, self.birth_date)
 
     @receiver(post_save, sender=User)
-    def create_profile(sender, instance, created, **kwargs):
-        if created and not kwargs.get('raw', False):
+    def create_profile(sender, instance, **kwargs):
+        if kwargs.get('created', True) and not kwargs.get('raw', False):
             Profile.objects.create(user=instance)
         instance.profile.save()
 

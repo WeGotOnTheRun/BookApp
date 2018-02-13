@@ -15,16 +15,6 @@ from django.contrib.auth.models import User
 # db_helper.ini_countries()
 
 
-class ExtendUser(admin.StackedInline):
-    model = Profile
-    can_delete = False
-    Verbose_name = 'profile'
-
-
-class UserAdmin(BaseUserAdmin):
-    inlines = (ExtendUser,)
-
-
 def sign_up(request):
     if request.method == 'POST':
         form = SignUp(request.POST, request.FILES)
