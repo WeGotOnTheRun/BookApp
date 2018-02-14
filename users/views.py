@@ -4,19 +4,16 @@ from .models import *
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import Http404,HttpResponseRedirect, reverse
 from helper import db_helper
-<<<<<<< HEAD
 from django.http import HttpResponse
 from django.db.models import Q
 from library.models  import Book,Author
 from django.views.decorators.csrf import csrf_exempt
-=======
 from django1 import settings
 from django.contrib.auth.views import login as auth_login
 from django.contrib.auth import authenticate, login
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.contrib.auth.models import User
->>>>>>> 63c793563747b27fd997ba14af1360a3edb9e16d
 
 # hash this line after using it.
 # db_helper.ini_countries()
@@ -72,7 +69,6 @@ def home(request):
             login(request, request.user)
             return HttpResponseRedirect('/admin/')
     return render(request, 'general_view/home.html')
-<<<<<<< HEAD
 
 #
 # @login_required
@@ -87,5 +83,3 @@ def home(request):
 #     except:
 #         raise Http404("User Doesn't Exist!")
 #
-=======
->>>>>>> 63c793563747b27fd997ba14af1360a3edb9e16d
