@@ -29,6 +29,12 @@ class BookDetailView(DetailView):
         ctx["isFav"]=favourite_books.objects.filter(user_id=self.request.user.id).values_list('book_id',flat=True)
         return ctx
 
+    def get_context_data(self, **kwargs):
+        context = super(BookDetailView, self).get_context_data(**kwargs)
+        book = self.get_object().pk
+        context['categoryBooks'] = Book.objects.get(pk=book).Category.all()
+        return context
+
 
 class AuthorListView(ListView):
     model = Author
@@ -63,7 +69,7 @@ def favourite(request):
     # user.favourite_books.add(Book)
     return JsonResponse(1,safe=False)
 
-        
+
 
 
 @login_required
@@ -92,7 +98,7 @@ def read(request):
         id=request.POST.get('id')
         b=ReadBook(user_id= request.user.id,book_id=id)
         b.save();
-       
+
 
 @login_required
 @csrf_exempt

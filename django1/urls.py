@@ -1,14 +1,12 @@
 from django.contrib import admin
 from django.urls import path, re_path, include
-from django.views.generic.base import TemplateView
 from django.conf import settings
 from django.conf.urls.static import static
 from library import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', TemplateView.as_view(template_name='general_view/home.html'), name='home'),
-    path('', include('users.urls')),
-    path('library/', include('library.urls')),
+    path('user/', include('users.urls')),
+    path('', include('library.urls')),
     path('users/', include('django.contrib.auth.urls')),
     path('library/books/love/', views.favourite, name='favourite'),
 ]
