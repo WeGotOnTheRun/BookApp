@@ -3,7 +3,7 @@
 {% block content %}
   <h2>Book</h2>
   {% for book in book_list%}
-      <a href="{% url 'library:BookDetail' book.Author.pk %}">{{ book.name}}</a>
+      <a href="{% url 'library:BookDetail' book.pk %}">{{ book.name}}</a>
       <img src="{{ book.picture.url }}" alt="can't load image" width="160" class="img-responsive img-circle mt mb">
   {% endfor %}
 {% endblock %}

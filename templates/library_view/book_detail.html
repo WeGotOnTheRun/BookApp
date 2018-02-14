@@ -1,5 +1,32 @@
 {% extends 'general_view/base.html' %}
+{% load static %}
 
+{% block st %}
+<style>
+.star {
+    width:96px;
+    height: 96px;
+
+     background:url('{%static "Appimages/hit.png" %}' );
+       float:left;
+}
+
+.on {
+
+      width:96px;
+      height: 96px;
+     background:url('{%static "Appimages/yellow.png" %}');
+}
+
+.rated &gt; .rating {
+
+      width:96px;
+      height: 96px;
+  background:url('{%static "Appimages/yellow.png" %}');
+}
+</style>
+
+{% endblock %}
 {% block content %}
   <h2>Books</h2>
       <p>Name: {{book.name}}</p>
@@ -8,5 +35,34 @@
       <p>Link: {{book.link}}</p>
       <p>Summary: {{book.summary}}</p>
       <p>published at: {{book.published_at}}</p>
-      <img src="{{ book.picture.url }}" alt="can't load image" width="160" class="img-responsive img-circle mt mb">
+      <img src="{{ book.picture.url }}" alt="can't load image" width="160" class="img-responsive img-circle mt mb"></br>
+      {% if  user.is_authenticated  %}
+       {% if  book.book_id in isFav %}
+       <img src="{%static "Appimages/RedHeart.png" %}" width="5%" height="5%" id="makeFav" name="1" />
+        {% endif %}
+        {% else %}
+       <img src="{%static "Appimages/Empty-Heart.png" %}" width="5%" height="5%" id="makeFav" name="2" />
+        {% endif %}
+         <img src="{%static "Appimages/read.png" %}" width="5%" height="5%" id="read"/>
+
+    <div >
+    <div class="star on rating"></div>
+    <div class="star on rating"></div>
+    <div class="star on rating"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+  </div>
+
+<!--
+<div class="star"></div> -->
+      <input type="hidden" id="book" value={{book}}>
+      <input type="hidden" id="fav" value="{{isFav}}">
+
+
+{% endblock %}
+{% block js-foot %}
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="{%static "book.js" %}"></script>
+<script src="{%static "js/jquery-1.4.2.min.js" %}"></script>
+
 {% endblock %}
