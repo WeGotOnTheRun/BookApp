@@ -1,19 +1,25 @@
 document.getElementById("makeFav").addEventListener("click", function(){
+    // console.log(document.getElementById("isUser").value);
     if (document.getElementById("makeFav").name==1){
       document.getElementById("makeFav").src="/static/Appimages/Empty-Heart.png";
       document.getElementById("makeFav").name="2";
+      var id=document.getElementById("book").value
+      console.log(id)
+          $.ajax({
+            url:'/favourite/delete/'+id,
+            success: function(data) {
+                alert(data);
+            }
+        });
     }
     else{
     document.getElementById("makeFav").src="/static/Appimages/RedHeart.png";
     var id=document.getElementById("book").value
     document.getElementById("makeFav").name="1";
     $.ajax({
-    url:'/hello/'+id,
+    url:'/favourite/'+id,
     success: function(data) {
         alert(data);
-    },
-    error: function(data) {
-     alert("error")
     }
 });
 }
@@ -21,13 +27,25 @@ document.getElementById("makeFav").addEventListener("click", function(){
 });
 
 
-
 $(function() {
         $('#read').click(function(){
-          $.post("/read",{id:document.getElementById("book").value},
+            var id =$('#book').val();
+            console.log($(this).attr('name')=="1")
+            if($(this).attr('name')==1){
+                $('#read').attr('name',"2")
+          $.post("/read",{id:id},
+            function(data) {
+              alert(data);
+            });}
+          else
+          {
+            $('#read').attr('name',"1")
+             $.post("/deleteRead",{id:id},
             function(data) {
               alert(data);
             });
+          }
+
         });
       });
 

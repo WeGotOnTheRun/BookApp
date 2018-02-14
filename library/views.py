@@ -6,8 +6,9 @@ from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
 from django.http import HttpResponse
 from django.views import View
-
+from django.contrib.auth import authenticate
 from django.views.decorators.csrf import csrf_exempt
+from django.db.models import Q
 def index(request):
     books = Book.objects.all().order_by('-book_id')[:3]
     authors = Author.objects.all()[:3]
@@ -25,15 +26,11 @@ class BookDetailView(DetailView):
     template_name = 'library_view/book_detail.html'
     def get_context_data(self, *args, **kwargs):
         ctx =super(BookDetailView, self).get_context_data(*args, **kwargs)
+        books = self.get_object().pk
+        ctx['categoryBooks'] = Book.objects.get(pk=books).Category.all()
         ctx["book"]=self.get_object()
         ctx["isFav"]=favourite_books.objects.filter(user_id=self.request.user.id).values_list('book_id',flat=True)
         return ctx
-
-    def get_context_data(self, **kwargs):
-        context = super(BookDetailView, self).get_context_data(**kwargs)
-        book = self.get_object().pk
-        context['categoryBooks'] = Book.objects.get(pk=book).Category.all()
-        return context
 
 
 class AuthorListView(ListView):
@@ -64,19 +61,44 @@ class CategoryDetailView(DetailView):
         context['categoryBooks'] = Book.objects.filter(Category=self.kwargs['pk'])
         return context
 
-def favourite(request):
-    user=request.user
-    # user.favourite_books.add(Book)
-    return HttpResponse("hello")
+@csrf_exempt
+def favourite(request,id):
+    if request.user.is_authenticated:
+        b=favourite_books(user_id= request.user.id,book_id=id)
+        b.save()
+
+@csrf_exempt
+def deleteFav(request,id):
+    if request.user.is_authenticated:
+        favourite_books.objects.filter(Q(user_id=request.user.id) & Q(book_id=id)).delete()
+        return HttpResponse("Done deleted")
+
+@csrf_exempt
+def deleteRead(request):
+    if request.user.is_authenticated:
+        id=request.POST.get('id')
+        ReadBook.objects.filter(Q(user_id=request.user.id) & Q(book_id=id)).delete()
+        return HttpResponse("Done deleted")
+
+@csrf_exempt
+def deleteCat(request):
+    if request.user.is_authenticated:
+        id=request.POST.get('id')
+        FavouriteCategory.objects.filter(Q(user_id=request.user.id) & Q(category_id=id)).delete()
+        return HttpResponse("Done deleted")
 
 
 
+@csrf_exempt
+def favCat(request):
+        if request.method == 'POST':
+            if request.user.is_authenticated:
+                id=request.POST.get('id')
+                b=FavouriteCategory(user_id= request.user.id,category_id=id)
+                b.save();
+            else:
+                return HttpResponse("login_required")
 
-@login_required
-def hello(request,id):
-    b=favourite_books(user_id= request.user.id,book_id=id)
-    b.save()
-    return HttpResponse("yes b2a")
 
 
 @login_required
@@ -99,15 +121,6 @@ def read(request):
         id=request.POST.get('id')
         b=ReadBook(user_id= request.user.id,book_id=id)
         b.save();
+        return HttpResponse("Read")
 
 
-@login_required
-@csrf_exempt
-def favCat(request):
-    if request.method == 'GET':
-            pass
-    elif request.method == 'POST':
-        id=request.POST.get('id')
-        b=FavouriteCategory(user_id= request.user.id,category_id=id)
-        b.save();
-        return HttpResponse("sdj")

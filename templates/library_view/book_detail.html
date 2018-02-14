@@ -35,17 +35,20 @@
       {% for category in categoryBooks %}
         <a href="{% url 'library:CategoryDetail' category.pk%}">{{ category.name}}</a>
       {% endfor %}
+
       <p>Country: {{book.country}}</p>
       <p>link: </p><a href="{{book.link}}">{{book.link}}</a>
       <p>Summary: {{book.summary}}</p>
       <p>published at: {{book.published_at}}</p>
       <img src="{{ book.picture.url }}" alt="can't load image" width="160" class="img-responsive img-circle mt mb"></br>
-      {% if  user.is_authenticated and book.book_id in isFav %}
+      <p> dsalidj:{{ book.book_id}}</p>
+      {% if user.is_authenticated and  book.book_id in isFav %}
+
        <img src="{%static "Appimages/RedHeart.png" %}" width="5%" height="5%" id="makeFav" name="1" />
         {% else %}
        <img src="{%static "Appimages/Empty-Heart.png" %}" width="5%" height="5%" id="makeFav" name="2" />
         {% endif %}
-         <img src="{%static "Appimages/read.png" %}" width="5%" height="5%" id="read"/>
+         <img src="{%static "Appimages/read.png" %}" width="5%" height="5%" id="read" name="1"/>
 
     <div >
     <div class="star on rating"></div>
@@ -59,6 +62,7 @@
 <div class="star"></div> -->
       <input type="hidden" id="book" value={{book}}>
       <input type="hidden" id="fav" value="{{isFav}}">
+      <input type="hidden" id="isUser" value="{{isUser}}">
 
 
 {% endblock %}

@@ -3,7 +3,6 @@ from users.models import *
 from .views import *
 from .models import *
 
-admin.site.register(Profile)
 admin.site.register(favourite_books)
 admin.site.register(RateBook)
 admin.site.register(ReadBook)
@@ -21,7 +20,7 @@ class UserAdmin(BaseUserAdmin):
     def get_inline_instances(self, request, obj=None):
         if not obj:
             return list()
-        return super(UserAdmin, self).get_inline_instances(request, obj)
+        return super(UserAdmin,self).get_inline_instances(request, obj)
 
 
 admin.site.unregister(User)

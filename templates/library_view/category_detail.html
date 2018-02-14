@@ -7,7 +7,7 @@
       {% for book in categoryBooks %}
         <a href="{% url 'library:BookDetail' book.pk%}">{{ book.name}}</a>
       {% endfor %}
-       <img src="{%static "Appimages/Empty-Heart.png" %}" width="5%" height="5%" id="FavCat"/>
+       <img src="{%static "Appimages/Empty-Heart.png" %}" width="5%" height="5%" id="FavCat" name="1"/>
        <input type="hidden" id="category" value={{category.category_id}}>
 {% endblock %}
 {% block js-foot %}
