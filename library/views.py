@@ -67,7 +67,7 @@ class CategoryDetailView(DetailView):
 def favourite(request):
     user=request.user
     # user.favourite_books.add(Book)
-    return JsonResponse(1,safe=False)
+    return HttpResponse("hello")
 
 
 
@@ -76,6 +76,7 @@ def favourite(request):
 def hello(request,id):
     b=favourite_books(user_id= request.user.id,book_id=id)
     b.save()
+    return HttpResponse("yes b2a")
 
 
 @login_required

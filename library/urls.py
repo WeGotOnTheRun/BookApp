@@ -11,8 +11,6 @@ urlpatterns = [
     path('books/', views.BookListView.as_view(), name='BookList'),
     path('books/<int:pk>', views.BookDetailView.as_view(), name='BookDetail'),
 
-
-
     re_path(r'^books/love/',views.favourite, name='favourite'),
     re_path(r'^hello/(?P<id>[0-9]+)/',views.hello, name='favBook'),
     re_path(r'^rate',views.rate, name='rate'),
