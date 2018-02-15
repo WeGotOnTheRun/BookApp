@@ -62,14 +62,18 @@ class CategoryDetailView(DetailView):
         return context
 
 @csrf_exempt
-def favourite(request,id):
+def favourite(request):
     if request.user.is_authenticated:
+        id=request.POST.get('id')
         b=favourite_books(user_id= request.user.id,book_id=id)
         b.save()
+        return HttpResponse("insert")
+
 
 @csrf_exempt
-def deleteFav(request,id):
+def deleteFav(request):
     if request.user.is_authenticated:
+        id=request.POST.get('id')
         favourite_books.objects.filter(Q(user_id=request.user.id) & Q(book_id=id)).delete()
         return HttpResponse("Done deleted")
 
@@ -100,17 +104,17 @@ def favCat(request):
                 return HttpResponse("login_required")
 
 
-
 @login_required
 @csrf_exempt
 def rate(request):
-    if request.method == 'GET':
-        pass
-    elif request.method == 'POST':
+    if  request.method == 'POST':
         ratee = request.POST.get('rate')
         id=request.POST.get('id')
-        b=RateBook(user_id= request.user.id,book_id=id,rate=ratee)
-        b.save();
+        if(RateBook.objects.filter(Q(user_id=request.user.id) & Q(book_id=id))):
+            RateBook.objects.filter(Q(user_id=request.user.id) & Q(book_id=id)).update(rate=ratee)
+        else:
+            b=RateBook(user_id= request.user.id,book_id=id,rate=ratee)
+            b.save();
 
 @login_required
 @csrf_exempt

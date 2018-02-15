@@ -11,9 +11,8 @@ urlpatterns = [
     path('books/', views.BookListView.as_view(), name='BookList'),
     path('books/<int:pk>', views.BookDetailView.as_view(), name='BookDetail'),
 
-    re_path(r'^books/love/',views.favourite, name='favourite'),
-    re_path(r'^favourite/(?P<id>[0-9]+)/',views.favourite, name='favBook'),
-    re_path(r'^favourite/delete/(?P<id>[0-9]+)/',views.deleteFav, name='delfavBook'),
+    re_path(r'^favourite',views.favourite, name='favBook'),
+    re_path(r'^delFav',views.deleteFav, name='delfavBook'),
     re_path(r'^deleteRead',views.deleteRead, name='delreadBook'),
     re_path(r'^rate',views.rate, name='rate'),
     re_path(r'^read',views.read, name='read'),
