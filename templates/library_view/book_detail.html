@@ -4,8 +4,12 @@
   <h2>Books</h2>
       <p>Name: {{book.name}}</p>
       <p>Author: </p><a href="{% url 'library:AuthorDetail' book.Author.pk %}">{{ book.Author}}</a>
-      <p>Name: {{book.country}}</p>
-      <p>Link: {{book.link}}</p>
+      <p>category: </p>
+      {% for category in categoryBooks %}
+        <a href="{% url 'library:CategoryDetail' category.pk%}">{{ category.name}}</a>
+      {% endfor %}
+      <p>Country: {{book.country}}</p>
+      <p>link: </p><a href="{{book.link}}">{{book.link}}</a>
       <p>Summary: {{book.summary}}</p>
       <p>published at: {{book.published_at}}</p>
       <img src="{{ book.picture.url }}" alt="can't load image" width="160" class="img-responsive img-circle mt mb">

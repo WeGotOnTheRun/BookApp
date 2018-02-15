@@ -19,6 +19,12 @@ class BookDetailView(DetailView):
     model = Book
     template_name = 'library_view/book_detail.html'
 
+    def get_context_data(self, **kwargs):
+        context = super(BookDetailView, self).get_context_data(**kwargs)
+        book = self.get_object().pk
+        context['categoryBooks'] = Book.objects.get(pk=book).Category.all()
+        return context
+
 
 class AuthorListView(ListView):
     model = Author
@@ -41,7 +47,11 @@ def CategoryListView(request):
     return render(request, 'library_view/category_list.html', {'category_list': category_list})
 
 
-# def CategoryDetailView(id, request):
-#     category = Category.objects.get(pk=id)
-#     mybooks = Book.objects.filter(Category=category)
-#     return render(request, 'library_view/category_list.html', {'mybooks': mybooks})
+class CategoryDetailView(DetailView):
+    model = Category
+    template_name = 'library_view/category_detail.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(CategoryDetailView, self).get_context_data(**kwargs)
+        context['categoryBooks'] = Book.objects.filter(Category=self.kwargs['pk'])
+        return context
