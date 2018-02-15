@@ -62,6 +62,7 @@ class CategoryDetailView(DetailView):
     def get_context_data(self, **kwargs):
         context = super(CategoryDetailView, self).get_context_data(**kwargs)
         context['categoryBooks'] = Book.objects.filter(Category=self.kwargs['pk'])
+        context['isFav']=FavouriteCategory.objects.filter(user_id=self.request.user.id).values_list('category_id',flat=True)
         return context
 
 @csrf_exempt
