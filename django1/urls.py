@@ -8,6 +8,8 @@ urlpatterns = [
     path('user/', include('users.urls')),
     path('', include('library.urls')),
     path('users/', include('django.contrib.auth.urls')),
+    path('', include('community.urls')),
+
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

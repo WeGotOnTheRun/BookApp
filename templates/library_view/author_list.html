@@ -1,9 +1,34 @@
 {% extends 'general_view/base.html' %}
+{% load staticfiles %}
+
+
 
 {% block content %}
+<div class="col-lg-12 col-md-12 text-center">
   <h2>Authors</h2>
+</div>
   {% for author in author_list%}
-      <a href="{% url 'library:AuthorDetail' author.pk %}">{{ author.name}}</a>
-      <img src="{{ author.picture.url }}" alt="can't load image" width="160" class="img-responsive img-circle mt mb">
+    <div class="container">
+        <div class="row">
+
+              <div class="col-lg-12 col-lg-offset-3 col-md-12">
+                  <a href="{% url 'library:AuthorDetail' author.pk %}">{{ author.name}}</a>
+                  <pre>       </pre>
+                  <img src="{{ author.picture.url }}" alt="can't load image" width="160" height="170" class="img-responsive img-circle mt mb">
+
+                  <pre>
+
+
+    </pre>
+            </div>
+
+
+
+
+
+
+            </div>
+            </div>
+
   {% endfor %}
 {% endblock %}

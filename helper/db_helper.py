@@ -1,6 +1,6 @@
 #this file is used for one time only.
 
-from library.models import Country
+from library.models import *
 
 
 def ini_countries():
@@ -12,3 +12,8 @@ def ini_countries():
             except:
                 print("there was a problem with line")
 
+# def ini_users():
+#
+# def ini_authors():
+#
+# def ini_books():

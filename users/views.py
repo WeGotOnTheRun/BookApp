@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from .forms import *
 from .models import *
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import Http404,HttpResponseRedirect, reverse
+from django.shortcuts import Http404, HttpResponseRedirect, reverse
 from helper import db_helper
 from django1 import settings
 from django.contrib.auth.views import login as auth_login
@@ -10,9 +10,6 @@ from django.contrib.auth import authenticate, login
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.contrib.auth.models import User
-
-# hash this line after using it.
-# db_helper.ini_countries()
 
 
 def sign_up(request):
@@ -52,9 +49,23 @@ def log_in(request):
 
 @login_required
 def home(request):
-    db_helper.ini_countries()
     if request.user.is_active:
         if request.user is not None and request.user.is_superuser and request.user.is_staff:
             login(request, request.user)
             return HttpResponseRedirect('/admin/')
     return render(request, 'general_view/home.html')
+
+
+def show_user(Username):
+    try:
+        return User.objects.get(username=Username)
+    except:
+        raise Http404("User Doesn't Exist!")
+
+
+def profile(request, Username):
+    user = show_user(Username)
+    #if user = current user
+        #redirect('profile')
+    #else
+    return render(request, 'user_view/users.html', {'user': user})

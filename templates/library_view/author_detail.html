@@ -1,15 +1,57 @@
 {% extends 'general_view/base.html' %}
 
 {% block content %}
-  <h2>Author info.</h2>
-      <p>Name: {{author.name}}</p>
-      <p>Born at: {{author.born_at}}</p>
-      <p>Died at: {{author.died_at}}</p>
-      <p>Bio: {{author.bio}}</p>
-      <p>contact: {{author.contact}}</p>
-      <img src="{{ author.picture.url }}" alt="can't load image" width="160" class="img-responsive img-circle mt mb">
-      <strong>Books: </strong>
+ <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+             <p> {{author.name}}</p>
+            </div>
+            <div class="col-lg-12">
+                <div class="row">
+<div class="col-lg-3">
+      <img src="{{ author.picture.url }}"  alt="can't load image" width="160" height="170" class="img-responsive img-circle mt mb">
+</div>
+<div class="col-lg-9">
+    <p>Born at:<a> {{author.born_at}}</a></p>
+    <p>Died at:  <a>{{author.died_at}}</a></p>
+
+    <p class="lead">Bio: <a class="writing">{{author.bio}}</a></p>
+</div>
+        </div>
+</div>
+
+<div class="col-lg-12">
+     <p>      </p>
+     <p>      </p>
+     <label>Books: </label>
       {% for book in mybooks %}
         <a href="{% url 'library:BookDetail' book.Author.pk %}">{{ book.name}}</a>
       {% endfor %}
+</div>
+<div class="col-lg-12">
+
+     <p>contact: {{author.contact}}</p>
+</div>
+
+               </div>
+</div>
+<pre>
+      {% if user.is_authenticated%}
+      {% if status == False %}
+        <form method="POST" action="{% url 'library:follow' %}">
+            {% csrf_token %}
+            <input type="submit"  name="follow" value="Follow" />
+            <input type="hidden" name="author_id" value="{{author.author_id}}" />
+        </form>
+      {% endif%}
+      {% if status == True %}
+        <form method="POST" action="{% url 'library:unfollow' %}">
+            {% csrf_token %}
+            <input class="btn btn-outline-warning" type="submit"  name="unfollow" value="unFollow" />
+            <input class="btn btn-outline-warning" type="hidden" name="author_id" value="{{author.author_id}}" />
+        </form>
+      {% endif%}
+
+      {% endif%}
+
 {% endblock %}

@@ -5,6 +5,7 @@ from django.dispatch import receiver
 from django.utils.encoding import python_2_unicode_compatible
 from library.models import Author
 
+
 @python_2_unicode_compatible
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -22,12 +23,3 @@ class Profile(models.Model):
         if kwargs.get('created', True) and not kwargs.get('raw', False):
             Profile.objects.create(user=instance)
         instance.profile.save()
-
-
-class Newsletter(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    author = models.ForeignKey(Author, on_delete=models.CASCADE)
-
-    class Meta:
-        db_table = 'newsletter'
-        unique_together = (('user', 'author'),)

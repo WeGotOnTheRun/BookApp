@@ -1,0 +1,32 @@
+body{
+padding-top:100px;
+background:black;
+
+}
+h2 ,p , label { color:orange;}
+a { color:orange;
+font_size:90px;
+
+}
+i{ color:red;}
+.footer{
+background:#333;
+color:#AAA;
+padding-top:10px;
+
+
+
+}
+.footer h4{ color:orange;
+letter_spacing:1px;
+
+}
+.footer .copy{
+background:black;
+color:#AAA;
+padding:5px 0;
+
+
+}
+.footer a.hover{color:#FFF;}
+

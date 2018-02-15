@@ -23,12 +23,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'sx)(mv0$v&j)8_w6i)(8z9g$&@fudrz4316tqve-72duxk@b=l'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+# DEBUG = False
+#
+# ALLOWED_HOSTS = ['127.0.0.1']
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
-
-# Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'library',
     'users',
+    'community',
 
 ]
 
@@ -145,3 +146,4 @@ EMAIL_PORT = 587
 LOGOUT_REDIRECT_URL = 'library:index'
 LOGIN_REDIRECT_URL = 'library:index'
 
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True

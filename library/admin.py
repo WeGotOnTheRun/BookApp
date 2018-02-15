@@ -8,3 +8,4 @@ admin.site.register(Country)
 admin.site.register(Category)
 
 
+

@@ -1,0 +1,15 @@
+{% extends 'general_view/base.html' %}
+
+{% block content %}
+  <h2>{{ user.username }}</h2>
+  {% if user.profile.picture %}
+    <img src="{{ user.profile.picture.url }}" alt="can't load image" width="160" class="img-responsive img-circle mt mb">
+  {% endif %}
+  {% if user.is_authenticated %}
+<!--if current user-->
+    <p>first name: {{ user.first_name }}</p>
+    <p>last name: {{ user.last_name }}</p>
+    <p>Email: {{ user.email }}</p>
+    <p>birthdate: {{ user.profile.birth_date }}</p>
+  {% endif %}
+{% endblock %}

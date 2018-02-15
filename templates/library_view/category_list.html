@@ -1,8 +1,29 @@
 {% extends 'general_view/base.html' %}
-
+{% load staticfiles %}
 {% block content %}
   <h2>categories</h2>
   {% for category in category_list%}
       <a href="{%url 'library:CategoryDetail' category.pk%}">{{ category.name}}</a>
+ <img src="{% static "img/RedHeart.png" %}" width="27" height="27"/>
+<p></p>
+<p></p>
   {% endfor %}
+<pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
 {% endblock %}

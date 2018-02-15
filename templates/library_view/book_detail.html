@@ -13,4 +13,22 @@
       <p>Summary: {{book.summary}}</p>
       <p>published at: {{book.published_at}}</p>
       <img src="{{ book.picture.url }}" alt="can't load image" width="160" class="img-responsive img-circle mt mb">
+      {% if user.is_authenticated%}
+          {% if status == False %}
+            <form method="POST" action="{% url 'library:add_to_wishlist' %}">
+                {% csrf_token %}
+                <input type="submit"  name="add" value="add" />
+                <input type="hidden" name="book_id" value="{{book.book_id}}" />
+            </form>
+          {% endif%}
+          {% if status == True %}
+            <form method="POST" action="{% url 'library:remove_from_wishlist' %}">
+                {% csrf_token %}
+                <input type="submit"  name="remove" value="remove" />
+                <input type="hidden" name="book_id" value="{{book.book_id}}" />
+            </form>
+          {% endif%}
+      {% endif %}
+
+
 {% endblock %}
