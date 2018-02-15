@@ -30,6 +30,9 @@ class BookDetailView(DetailView):
         ctx['categoryBooks'] = Book.objects.get(pk=books).Category.all()
         ctx["book"]=self.get_object()
         ctx["isFav"]=favourite_books.objects.filter(user_id=self.request.user.id).values_list('book_id',flat=True)
+        if RateBook.objects.filter(Q(user_id=self.request.user.id) & Q(book_id=self.get_object().pk)).values_list('rate', flat=True):
+            ctx["rateValue"]=range(RateBook.objects.filter(Q(user_id=self.request.user.id) & Q(book_id=self.get_object().pk)).values_list('rate', flat=True)[0])
+            ctx["non"]=range(5-RateBook.objects.filter(Q(user_id=self.request.user.id) & Q(book_id=self.get_object().pk)).values_list('rate', flat=True)[0])
         return ctx
 
 
