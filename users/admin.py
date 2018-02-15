@@ -20,7 +20,7 @@ class UserAdmin(BaseUserAdmin):
     def get_inline_instances(self, request, obj=None):
         if not obj:
             return list()
-        return super(UserAdmin,self).get_inline_instances(request, obj)
+        return super(UserAdmin, self).get_inline_instances(request, obj)
 
 
 admin.site.unregister(User)

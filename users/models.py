@@ -23,6 +23,7 @@ class Profile(models.Model):
         if kwargs.get('created', True) and not kwargs.get('raw', False):
             Profile.objects.create(user=instance)
         instance.profile.save()
+
 class favourite_books(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     book=models.ForeignKey(Book,on_delete=models.CASCADE)
@@ -53,7 +54,7 @@ class Newsletter(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
 
-class Meta:
+    class Meta:
         db_table = 'newsletter'
         unique_together = (('user', 'author'),)
 

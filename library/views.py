@@ -35,9 +35,8 @@ def index(request):
     except:
         active_user = 0
 
-    userp = get_picture(request)
 
-    return render(request, 'library_view/index.html', {'userp':userp,'follow': follow, 'books': books, 'authors': authors, 'categories': categories, 'book_no': book_no, 'category_no':category_no,'author_no':author_no, 'active_user':active_user})
+    return render(request, 'library_view/index.html', {'follow': follow, 'books': books, 'authors': authors, 'categories': categories, 'book_no': book_no, 'category_no':category_no,'author_no':author_no, 'active_user':active_user})
 
 
 class BookListView(ListView):

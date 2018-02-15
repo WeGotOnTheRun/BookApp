@@ -41,16 +41,18 @@
     <form class="form-inline my-2 my-lg-0" action="{% url 'user:search' %}" method="get" accept-charset="utf-8" >
 
       {% if user.is_authenticated %}
-        {% block pic%}
-        {%endblock%}
+       <a href="{% url 'user:home' %}"> Profile</a>
 
         <input class="form-control mr-sm-2" type="text"  placeholder="Search" aria-label="Search" name="search">
       <button class="btn btn-outline-warning" type="submit">Search</button>/
         <a class="btn btn-outline-warning" href="{% url 'logout' %}">logout</a>
+                <a href="{% url 'community:home' %}">community</a>
+
       {% else %}
         <a  class="btn btn-outline-warning" href="{% url 'login' %}">login</a> /
         <a  class="btn btn-outline-warning" href="{% url 'user:signup' %}">signup</a>
       {% endif %}
+    </form>
   </div>
 </nav>
     <main>

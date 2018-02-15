@@ -1,6 +1,6 @@
 {% extends 'general_view/base.html' %}
 {% block content %}
-
+{% if user.is_authenticated %}
 <div class="col-md-12 content-margin">
   <form class="form-horizontal style-form" action="{% url 'community:savequestion' %}" method="POST">
           {% csrf_token %}
@@ -20,8 +20,14 @@
       {% for question in questions %}
       <div class="panel-heading">
         <div class="col-md-2">
-          <a href="{% url 'user:profile'  question.user.username %}"> {{question.user.usernam}}
+              {% if question.user.is_superuser %}
+            <p>Admin</p>
+            {%else%}
+            <a href="{% url 'user:profile'  question.user.username %}">
+                <img alt="" src="{{ question.user.profile.picture.url }}" class="media-object img-responsive">
+
           </a>
+            {% endif %}
         </div>
         <div class="media-body">
           <h4 class="media-heading">{{ question.user.username  }}</h4>
@@ -50,8 +56,13 @@
           {% if question.question_id == answer.question_id.question_id%}
         <li class="media">
           <div class="col-md-2">
-            <a href="{% url 'user:profile' question.user.username %}">{{question.user.usernam}}
+              {% if answer.user.is_superuser %}
+            <p>Admin</p>
+            {%else%}
+            <a href="{% url 'user:profile' answer.user.username %}">
+                <img alt="" src="{{ answer.user.profile.picture.url }}" class="media-object img-responsive">
             </a>
+              {% endif %}
           </div>
           <div class="media-body">
             <h4 class="media-heading">{{ answer.user.username }} <small>{{ answer.posted_time }}</small></h4>
@@ -77,5 +88,5 @@
       {% endfor %}
   </div>
 </div>
-
+{% endif %}
 {% endblock %}
