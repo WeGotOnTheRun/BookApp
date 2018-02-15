@@ -10,6 +10,11 @@ from django.contrib.auth import authenticate, login
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.contrib.auth.models import User
+from django.db.models import Q
+from library.models  import Book,Author
+from django.views.decorators.csrf import csrf_exempt
+
+
 
 
 def sign_up(request):
@@ -46,7 +51,13 @@ def log_in(request):
                 return redirect('/')
         return auth_login(request, {'template_name': 'login.html'})
 
-
+@csrf_exempt
+def search(request):
+        Text=request.GET.get('search')
+        books = Book.objects.filter(Q(name__icontains=Text) |Q(summary__icontains=Text))
+        authors=Author.objects.filter(name__icontains=Text)
+        return render(request,'library_view/search.html',{'books':books,'authors':authors})
+        
 @login_required
 def home(request):
     if request.user.is_active:

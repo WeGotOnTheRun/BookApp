@@ -1,7 +1,41 @@
 {% extends 'general_view/base.html' %}
+{% load staticfiles %}
+{% block st %}
+<style>
+.star {
+    width:96px;
+    height: 96px;
 
+     background:url('{%static "img/hit.png" %}' );
+       float:left;
+}
+
+.on {
+
+      width:96px;
+      height: 96px;
+     background:url('{%static "img/yellow.png" %}');
+}
+
+.rated &gt; .rating {
+
+      width:96px;
+      height: 96px;
+  background:url('{%static "img/yellow.png" %}');
+}
+</style>
+
+{% endblock %}
 {% block content %}
-  <h2>Books</h2>
+  <h2>Books </h2>
+      {% if user.is_authenticated %}
+      {% if book.book_id in isFav %}
+       <img src="{%static "img/RedHeart.png" %}" width="5%" height="5%" id="makeFav" name="1" />
+        {% else %}
+       <img src="{%static "img/Empty-Heart.png" %}" width="5%" height="5%" id="makeFav" name="2" />
+        {% endif %}
+         {% endif %}
+
       <p>Name: {{book.name}}</p>
       <p>Author: </p><a href="{% url 'library:AuthorDetail' book.Author.pk %}">{{ book.Author}}</a>
       <p>category: </p>
@@ -28,7 +62,50 @@
                 <input type="hidden" name="book_id" value="{{book.book_id}}" />
             </form>
           {% endif%}
-      {% endif %}
+        {% endif %}
 
+           <div class="btn-group">
+               {% if user.is_authenticated %}
+
+                      <button type="button" class="btn btn-outline-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                       Actions
+                      </button>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="{% url 'library:read' book.book_id %}" name="Mark as read">Mark as read</a>
+                        <a class="dropdown-item" href="#" name="Add to wish list">Add to wish list</a>
+                          <pre>             </pre>
+                      </div>
+                       {% endif %}
+
+                        {% if user.is_authenticated %}
+                         <div>
+                          {% if rateValue %}
+                          {% for i in rateValue %}
+                          <div class="star on rating"></div>
+                          {% endfor %}
+                           {% for i in non %}
+                          <div class="star"></div>
+                          {% endfor %}
+                          {%else %}
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                          {% endif %}
+                        </div>
+                       {% endif %}
+                  </div>
+
+      <input type="hidden" id="book" value={{book}}>
+      <input type="hidden" id="fav" value="{{isFav}}">
+      <input type="hidden" id="isUser" value="{{isUser}}">
+
+
+{% endblock %}
+{% block js-foot %}
+<script src="{%static "js/jquery.min.js" %}"></script>
+<script src="{%static "js/book.js" %}"></script>
+<script src="{%static "js/jquery-1.4.2.min.js" %}"></script>
 
 {% endblock %}

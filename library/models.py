@@ -61,7 +61,7 @@ class Book(models.Model):
         db_table = 'Book'
 
     def __str__(self):
-        return self.name
+        return str(self.book_id)
 
 
 @python_2_unicode_compatible

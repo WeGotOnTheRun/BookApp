@@ -12,7 +12,9 @@
   <link href="{% static 'css/rtl.css' %}" rel="stylesheet">
      <link href="{% static 'css/style.css' %}" rel="stylesheet">
  <link href="{% static 'css/fontawesome-all.min.css' %}" rel="stylesheet">
-
+ 
+{% block st %}
+{% endblock %}
 
   </head>
   <body>
@@ -36,22 +38,19 @@
       </li>
     </ul>
 
-    <form class="form-inline my-2 my-lg-0">
+    <form class="form-inline my-2 my-lg-0" action="{% url 'user:search' %}" method="get" accept-charset="utf-8" >
 
       {% if user.is_authenticated %}
         {% block pic%}
         {%endblock%}
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+
+        <input class="form-control mr-sm-2" type="text"  placeholder="Search" aria-label="Search" name="search">
       <button class="btn btn-outline-warning" type="submit">Search</button>/
         <a class="btn btn-outline-warning" href="{% url 'logout' %}">logout</a>
-        <a href="{% url 'community:home' %}">community</a>
-
       {% else %}
         <a  class="btn btn-outline-warning" href="{% url 'login' %}">login</a> /
         <a  class="btn btn-outline-warning" href="{% url 'user:signup' %}">signup</a>
       {% endif %}
-
-    </form>
   </div>
 </nav>
     <main>
@@ -80,8 +79,8 @@
   <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
    <script src="{% static 'js/bootstrap.min.js' %}"></script>
 
-
-
+    {% block js-foot %}
+    {% endblock %}
 
   </body>
 </html>

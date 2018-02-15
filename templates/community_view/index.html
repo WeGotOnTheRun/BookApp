@@ -20,8 +20,7 @@
       {% for question in questions %}
       <div class="panel-heading">
         <div class="col-md-2">
-          <a href="{% url 'user:profile'  question.user.username %}">
-            <img alt="" src="{{ question.user.profile.picture.url }}" class="media-object img-responsive">
+          <a href="{% url 'user:profile'  question.user.username %}"> {{question.user.usernam}}
           </a>
         </div>
         <div class="media-body">
@@ -51,8 +50,7 @@
           {% if question.question_id == answer.question_id.question_id%}
         <li class="media">
           <div class="col-md-2">
-            <a href="{% url 'user:profile' question.user.username %}">
-            <img alt="" src="{{ question.user.profile.picture.url }}" class="media-object img-responsive">
+            <a href="{% url 'user:profile' question.user.username %}">{{question.user.usernam}}
             </a>
           </div>
           <div class="media-body">
