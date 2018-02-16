@@ -60,7 +60,7 @@ class BookDetailView(DetailView):
 
         user = self.request.user.id
         try:
-            ctx['status'] = wish_list.objects.get(user=user, book=book).status
+            ctx['status'] = wish_list.objects.get(user=user, book=books).status
         except:
             ctx['status'] = False
 
@@ -137,7 +137,7 @@ def favCat(request):
             if request.user.is_authenticated:
                 id=request.POST.get('id')
                 b=FavouriteCategory(user_id= request.user.id,category_id=id)
-                b.save();
+                b.save()
 
 
 @login_required
@@ -150,7 +150,7 @@ def rate(request):
             RateBook.objects.filter(Q(user_id=request.user.id) & Q(book_id=id)).update(rate=ratee)
         else:
             b=RateBook(user_id= request.user.id,book_id=id,rate=ratee)
-            b.save();
+            b.save()
 
 @login_required
 @csrf_exempt

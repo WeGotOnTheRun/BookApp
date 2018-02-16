@@ -46,6 +46,7 @@
       <p>link: </p><a href="{{book.link}}">{{book.link}}</a>
       <p>Summary: {{book.summary}}</p>
       <p>published at: {{book.published_at}}</p>
+
       <img src="{{ book.picture.url }}" alt="can't load image" width="160" class="img-responsive img-circle mt mb">
       {% if user.is_authenticated%}
           {% if status == False %}
