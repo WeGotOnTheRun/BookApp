@@ -1,6 +1,13 @@
 {% extends 'general_view/base.html' %}
 {% block content %}
 {% if user.is_authenticated %}
+<div class="col-lg-12 col-md-12 text-center">
+        <br><br>
+        <center><h2>Welcome to community.</h2></center>
+        <br><br><br><br>
+</div>
+<div class="size">
+<h2>What's in your mind? </h2>
 <div class="col-md-12 content-margin">
   <form class="form-horizontal style-form" action="{% url 'community:savequestion' %}" method="POST">
           {% csrf_token %}
@@ -9,33 +16,38 @@
                 <div class="col-lg-12">
                 <div class="input-group">
                     {{ QuestionForm.content }}
-                    <span class="input-group-btn"><button class="btn btn-theme" type="submit">Ask</button></span>
+                    <span class="input-group-btn"><button class="btn btn-outline-warning" type="submit">Ask</button></span>
                 </div>
               </div>
           </div>
         </div>
     </form>
-
-  <div class="">
+<br><br><br><br>
+    <div class="bord">
       {% for question in questions %}
       <div class="panel-heading">
         <div class="col-md-2">
               {% if question.user.is_superuser %}
             <p>Admin</p>
             {%else%}
+            {% if user.get_username == question.user.username %}
+            <a href="{% url 'user:home' %}">
+                <img src="{{ question.user.profile.picture.url }}" alt="can't load image" width="160" height="170" class="img-responsive img-circle mt mb">
+            </a>
+            {% else %}
             <a href="{% url 'user:profile'  question.user.username %}">
-                <img alt="" src="{{ question.user.profile.picture.url }}" class="media-object img-responsive">
-
-          </a>
+                <img src="{{ question.user.profile.picture.url }}" alt="can't load image" width="160" height="170" class="img-responsive img-circle mt mb">
+            </a>
+            {% endif %}
             {% endif %}
         </div>
         <div class="media-body">
-          <h4 class="media-heading">{{ question.user.username  }}</h4>
+          <h4 class="media-heading">{{ question.user.username}}</h4>
           <p class="media-usermeta">
             <span class="media-time">{{ question.posted_time }}</span>
           </p>
         </div>
-      </div><!-- panel-heading -->
+      </div>
       <div class="panel-body">
       <div class="media">
         <div class="media-body">
@@ -46,7 +58,7 @@
       </div>
       <div class="panel-footer">
       <ul class="list-inline">
-        <li><a data-target="#{{question.question_id}}" data-toggle="collapse"><i class="glyphicon glyphicon-comment"></i> Comments ({{question.NumberOfAnswers}})</a></li>
+        <li><a data-target="#{{question.question_id}}" data-toggle="collapse"><i class="glyphicon glyphicon-comment"></i> Comments ({{question.number_of_answers}})</a></li>
       </ul>
       </div>
 
@@ -59,9 +71,15 @@
               {% if answer.user.is_superuser %}
             <p>Admin</p>
             {%else%}
-            <a href="{% url 'user:profile' answer.user.username %}">
-                <img alt="" src="{{ answer.user.profile.picture.url }}" class="media-object img-responsive">
+            {% if user.get_username == question.user.username %}
+            <a href="{% url 'user:home' %}">
+                <img src="{{ answer.user.profile.picture.url }}" alt="can't load image" width="160" height="170" class="img-responsive img-circle mt mb">
             </a>
+            {% else %}
+            <a href="{% url 'user:profile'  answer.user.username %}">
+                <img src="{{ answer.user.profile.picture.url }}" alt="can't load image" width="160" height="170" class="img-responsive img-circle mt mb">
+            </a>
+              {% endif %}
               {% endif %}
           </div>
           <div class="media-body">
@@ -76,17 +94,20 @@
 
       <form  action="{% url 'community:saveanswer' question.question_id %}" method="POST"  class="panel-footer">
           {% csrf_token %}
-          <div class="form-group">
-              <div class="input-group">
+          <div class="row">
+            <div class="form-group">
+                <div class="col-lg-12">
+                <div class="input-group">
                   {{ AnswerForm.content }}
-                  <span class="input-group-btn">
-                    <button class="btn btn-theme" type="submit">comment</button>
-                  </span>
+                    <span class="input-group-btn"><button class="btn btn-outline-warning" type="submit">Comment</button></span>
                 </div>
-            </div>
+              </div>
+          </div>
+        </div>
       </form>
       {% endfor %}
   </div>
+    </div>
 </div>
 {% endif %}
 {% endblock %}

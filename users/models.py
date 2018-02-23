@@ -24,19 +24,36 @@ class Profile(models.Model):
             Profile.objects.create(user=instance)
         instance.profile.save()
 
+
+@python_2_unicode_compatible
 class favourite_books(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    book=models.ForeignKey(Book,on_delete=models.CASCADE)
+    book = models.ForeignKey(Book,on_delete=models.CASCADE)
 
+    class Meta:
+        db_table = 'favourite_books'
+
+    def __str__(self):
+        return '{} {}'.format(self.user, self.book.name)
+
+
+@python_2_unicode_compatible
 class FavouriteCategory(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    category=models.ForeignKey(Category,on_delete=models.CASCADE)
+    category = models.ForeignKey(Category,on_delete=models.CASCADE)
 
+    class Meta:
+        db_table = 'FavouriteCategory'
+
+    def __str__(self):
+        return '{} {}'.format(self.user, self.category.name)
+
+@python_2_unicode_compatible
 class RateBook(models.Model):
     """docstring for ClassName"""
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    book=models.ForeignKey(Book,on_delete=models.CASCADE)
-    rates= (
+    book = models.ForeignKey(Book,on_delete=models.CASCADE)
+    rates = (
         (1,  'very Bad'),
         (2,  'Bad'),
         (3,  'Good'),
@@ -45,11 +62,26 @@ class RateBook(models.Model):
       )
     rate = models.IntegerField(choices=rates)
 
+    class Meta:
+        db_table = 'RateBook'
 
+    def __str__(self):
+        return '{} {}'.format(self.user, self.book.name)
+
+
+@python_2_unicode_compatible
 class ReadBook(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    book=models.ForeignKey(Book,on_delete=models.CASCADE)
+    book = models.ForeignKey(Book, on_delete=models.CASCADE)
 
+    class Meta:
+        db_table = 'readbook'
+
+    def __str__(self):
+        return '{} {}'.format(self.user, self.book.name)
+
+
+@python_2_unicode_compatible
 class Newsletter(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
@@ -58,3 +90,5 @@ class Newsletter(models.Model):
         db_table = 'newsletter'
         unique_together = (('user', 'author'),)
 
+    def __str__(self):
+        return '{} {}'.format(self.user, self.author)

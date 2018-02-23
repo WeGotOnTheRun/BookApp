@@ -1,12 +1,17 @@
 {% extends 'general_view/base.html' %}
 
 {% block content %}
-  <h2>welcome again {{ user.username }}</h2>
-{% if user.profile.picture %}
-  <img src="{{ user.profile.picture.url }}" alt="can't load image" width="160" class="img-responsive img-circle mt mb">
-{% endif %}
-  <p>first name: {{ user.first_name }}</p>
-  <p>last name: {{ user.last_name }}</p>
-  <p>Email: {{ user.email }}</p>
-  <p>birthdate: {{ user.profile.birth_date }}</p>
+    <br><br>
+    <center><h2>{{user.username}}'s Profile.</h2></center>
+    <br><br><br><br>
+    <div class="img">
+        {% if user.profile.picture %}
+            <img src="{{ user.profile.picture.url }}" alt="can't load image" width="160" class="img-responsive img-circle mt mb profileimg">
+        {% endif %}
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;  Username: &nbsp;&nbsp;&nbsp;&nbsp;{{user.username}}<br></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;  Name: &nbsp;&nbsp;&nbsp;&nbsp;{{ user.first_name }} {{ user.last_name }}<br></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;  Email: &nbsp;&nbsp;&nbsp;&nbsp;{{ user.email }}<br></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp; birth date: &nbsp;&nbsp;&nbsp;&nbsp;{{ user.profile.birth_date }}<br></p>
+    </div>
+    <br><br><br><br>
 {% endblock %}

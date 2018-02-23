@@ -24,6 +24,7 @@ class Author(models.Model):
 class Category(models.Model):
     category_id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=30)
+    picture = models.ImageField(upload_to='category_images/', blank=True, null=True)
 
     class Meta:
         db_table = 'Category'

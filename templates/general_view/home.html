@@ -1,12 +1,164 @@
 {% extends 'general_view/base.html' %}
 
+{% load staticfiles %}
 {% block content %}
-  <h2>welcome again {{ user.username }}</h2>
-{% if user.profile.picture %}
-  <img src="{{ user.profile.picture.url }}" alt="can't load image" width="160" class="img-responsive img-circle mt mb">
-{% endif %}
-  <p>first name: {{ user.first_name }}</p>
-  <p>last name: {{ user.last_name }}</p>
-  <p>Email: {{ user.email }}</p>
-  <p>birthdate: {{ user.profile.birth_date }}</p>
+    <br><br>
+    <center><h2>{{user.username}}'s Profile.</h2></center>
+    <br><br><br><br>
+    <div class="img">
+        {% if user.profile.picture %}
+            <img src="{{ user.profile.picture.url }}" alt="can't load image" width="160" class="img-responsive img-circle mt mb profileimg">
+        {% endif %}
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;  Username: &nbsp;&nbsp;&nbsp;&nbsp;{{user.username}}<br></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;  Name: &nbsp;&nbsp;&nbsp;&nbsp;{{ user.first_name }} {{ user.last_name }}<br></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;  Email: &nbsp;&nbsp;&nbsp;&nbsp;{{ user.email }}<br></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp; birth date: &nbsp;&nbsp;&nbsp;&nbsp;{{ user.profile.birth_date }}<br></p>
+    <br><br><br><br>
+
+
+    <p></p>
+    </div>
+    {%if booklist %}
+        <br><br><br>
+        <center><h2>WishList.</h2></center>
+        <br><br><br>
+        <p></p>
+        <div class="catindex">
+            {%for book in booklist%}
+                <a href="{% url 'library:BookDetail' book.pk %}">
+                    <img  src="{{ book.picture.url }}" alt="can't load image" width="160" >
+                </a>
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            {%endfor%}
+        </div>
+        <br><br>
+    {%endif%}
+
+    <p></p>
+    {%if followlist %}
+        <br><br><br>
+        <center><h2>Followed Authors.</h2></center>
+        <br><br><br>
+        <p></p>
+        <div class="catindex">
+            {%for author in followlist%}
+                <a href="{% url 'library:AuthorDetail' author.pk %}">
+                    <img style=float-left; src="{{ author.picture.url }}" alt="can't load image" width="160" >
+                </a>
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            {%endfor%}
+        </div>
+        <br><br>
+    {%endif%}
+
+    <p></p>
+    {%if readlist %}
+        <br><br><br>
+        <center><h2>Marked as read.</h2></center>
+        <br><br><br>
+        <p></p>
+        <div class="catindex">
+            {%for book in readlist%}
+            <a href="{% url 'library:BookDetail' book.pk %}">
+                    <img style=float-left; src="{{ book.picture.url }}" alt="can't load image" width="160">
+                </a>
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            {%endfor%}
+        </div>
+        <br><br>
+    {%endif%}
+
+    <p></p>
+    {%if favcategorylist %}
+        <br><br><br>
+        <center><h2>Favourite Categories.</h2></center>
+        <br><br><br>
+        <p></p>
+        <div class="catindex">
+            {%for category in favcategorylist%}
+                <a href="{% url 'library:CategoryDetail' category.pk %}">
+                    <img style=float-left; src="{{ category.picture.url }}" alt="can't load image" width="160">
+                </a>
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            {%endfor%}
+        </div>
+        <br><br>
+    {%endif%}
+
+    <p></p>
+    {%if favbooklist %}
+        <br><br><br>
+        <center><h2>Favourite Books.</h2></center>
+        <br><br><br>
+        <p></p>
+        <div class="catindex">
+            {%for book in favbooklist%}
+                <a href="{% url 'library:BookDetail' book.pk %}">
+                    <img style=float-left; src="{{ book.picture.url }}" alt="can't load image" width="160">
+                </a>
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            {%endfor%}
+        </div>
+        <br><br>
+    {%endif%}
+
+    <p></p>
+    {%if recommend_author %}
+        <br><br><br>
+        <center><h2>Recommended Authors.</h2></center>
+        <br><br><br>
+        <p></p>
+        <div class="catindex">
+            {%for r in recommend_author%}
+                <a href="{% url 'library:AuthorDetail' r.pk %}">
+                    <img style=float-left; src="{{ r.picture.url }}" alt="can't load image" width="160" >
+                </a>
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            {%endfor%}
+        </div>
+        <br><br>
+    {%endif%}
+
+    <p></p>
+    {%if recommend_book %}
+        <br><br><br>
+        <center><h2>Recommended Books.</h2></center>
+        <br><br><br>
+        <p></p>
+        <div class="catindex">
+            {%for r in recommend_book%}
+                <a href="{% url 'library:BookDetail' r.pk %}">
+                    <img style=float-left; src="{{ r.picture.url }}" alt="can't load image" width="160">
+                </a>
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            {%endfor%}
+        </div>
+        <br><br>
+    {%endif%}
+
+    <p></p>
+    {%if recommend_category %}
+        <br><br><br>
+        <center><h2>Recommended Categories.</h2></center>
+        <br><br><br>
+        <p></p>
+        <div class="catindex">
+            {%for r in recommend_category%}
+                <a href="{% url 'library:CategoryDetail' r.pk %}">
+                    <img style=float-left; src="{{ r.picture.url }}" alt="can't load image" width="160">
+                </a>
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            {%endfor%}
+        </div>
+        <br><br>
+    {%endif%}
+
 {% endblock %}

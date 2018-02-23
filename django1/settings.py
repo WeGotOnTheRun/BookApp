@@ -25,7 +25,7 @@ SECRET_KEY = 'sx)(mv0$v&j)8_w6i)(8z9g$&@fudrz4316tqve-72duxk@b=l'
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = False
 #
-# ALLOWED_HOSTS = ['127.0.0.1']
+# ALLOWED_HOSTS = ['127.0.0.1:8000']
 DEBUG = True
 
 ALLOWED_HOSTS = []

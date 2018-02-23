@@ -1,29 +1,29 @@
 {% extends 'general_view/base.html' %}
 {% load staticfiles %}
 {% block content %}
-  <h2>categories</h2>
-  {% for category in category_list%}
-      <a href="{%url 'library:CategoryDetail' category.pk%}">{{ category.name}}</a>
- <img src="{% static "img/RedHeart.png" %}" width="27" height="27"/>
-<p></p>
-<p></p>
-  {% endfor %}
-<pre>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</pre>
+    <div class="col-lg-12 col-md-12 text-center">
+        <br><br>
+        <center><h2>Categories.</h2></center>
+        <br><br><br><br>
+    </div>
+{% if category_list %}
+    {% for category in category_list%}
+    <div class="container">
+        <div class="row">
+              <div class="col-lg-12 col-lg-offset-3 col-md-12 ">
+                  <img src="{{ category.picture.url }}" alt="can't load image" width="160" height="170" class="img-responsive img-circle mt mb">
+                  <pre></pre>
+                  <div class="categorymargin">
+                      <a href="{%url 'library:CategoryDetail' category.pk%}">{{ category.name}}</a>
+                    </div>
+                  <pre></pre>
+                  <pre></pre>
+              </div>
+        </div>
+    </div>
+    {% endfor %}
+{% else %}
+<div class=""><center><h2>There're no categories yet.</h2></center></div>
+<center><img src="{% static 'img/sad.png' %}"  height="150" width="150" /></center>
+{% endif %}
 {% endblock %}

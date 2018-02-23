@@ -1,34 +1,29 @@
 {% extends 'general_view/base.html' %}
 {% load staticfiles %}
-
-
-
 {% block content %}
-<div class="col-lg-12 col-md-12 text-center">
-  <h2>Authors</h2>
-</div>
-  {% for author in author_list%}
+    <div class="col-lg-12 col-md-12 text-center">
+        <br><br>
+        <center><h2>Authors.</h2></center>
+        <br><br><br><br>
+    </div>
+{% if author_list %}
+    {% for author in author_list%}
     <div class="container">
         <div class="row">
-
-              <div class="col-lg-12 col-lg-offset-3 col-md-12">
-                  <a href="{% url 'library:AuthorDetail' author.pk %}">{{ author.name}}</a>
-                  <pre>       </pre>
+              <div class="col-lg-12 col-lg-offset-3 col-md-12 ">
                   <img src="{{ author.picture.url }}" alt="can't load image" width="160" height="170" class="img-responsive img-circle mt mb">
-
-                  <pre>
-
-
-    </pre>
-            </div>
-
-
-
-
-
-
-            </div>
-            </div>
-
-  {% endfor %}
+                  <pre></pre>
+                  <a href="{% url 'library:AuthorDetail' author.pk %}">{{ author.name}}</a>
+                  <pre></pre>
+                  <pre></pre>
+              </div>
+        </div>
+    </div>
+    {% endfor %}
+{% else %}
+<br><br><br><br>
+<div class=""><center><h2>There're no authors yet.</h2></center></div>
+<br><br><br><br>
+<center><img src="{% static 'img/sad.png' %}"  height="300" width="300" /></center>
+{% endif %}
 {% endblock %}

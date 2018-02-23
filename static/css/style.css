@@ -30,3 +30,97 @@ padding:5px 0;
 }
 .footer a.hover{color:#FFF;}
 
+.figure1 {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+.caption {
+    text-align:left
+}
+.caption > div {
+    color:orange;
+    display:inline-block;
+}
+.book{
+    margin-left: 150px;
+}
+.book >div{
+    margin-left:20px;
+}
+.author{
+    margin-left: 270px;
+}
+.author >div{
+    margin-left:20px;
+}
+.category{
+    margin-left: 320px;
+}
+.category >div{
+    margin-left:34px;
+}
+.reader{
+    margin-left: 278px;
+}
+.reader >div{
+    margin-left:24px;
+}
+.user{
+    margin-left: 294px;
+}
+.user >div{
+    margin-left:20px;
+}
+.seemore{
+    margin-left:1700px;
+}
+.form{
+    margin: 0 auto;
+    width:250px;
+}
+.login{
+    margin-left:150px;
+}
+.signup{
+    margin-left:400px;
+}
+.signupbtn{
+    margin-left:300px;
+}
+.profileimg{
+    margin-left:300px;
+    border: 5px solid orange;
+    float: left;
+}
+.fontcolor{
+    color:white;
+}
+.follow{
+    margin-left:50px;
+}
+.categorymargin{
+    margin-left:50px;
+
+}
+.marg{
+    margin-left:400px;
+    color:orange;
+}
+.catindex{
+    margin-left:200px;
+}
+.bord{
+    border: 0px solid grey;
+}
+.size{
+    margin-left:20px;
+    margin-top:20px;
+}
+
+.bg{
+    background-color: Black;
+    position: absolute;
+}

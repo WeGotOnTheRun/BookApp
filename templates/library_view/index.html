@@ -14,21 +14,21 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="{% static "img/thumb-1920-389875.jpg" %}"  height="500" alt="First slide"/>
+      <img class="d-block w-100" src="{% static 'img/thumb-1920-389875.jpg' %}"  height="500" alt="First slide"/>
         <div class="carousel-caption d-none d-md-block">
     <h5>Reads</h5>
     <p>It is a different reading experince</p>
   </div>
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="{% static "img/1.jpg" %}"  height="500" alt="Second slide"/>
+      <img class="d-block w-100" src="{% static 'img/1.jpg' %}"  height="500" alt="Second slide"/>
         <div class="carousel-caption d-none d-md-block">
     <h5>Books</h5>
     <p>find the latest Books</p>
   </div>
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="{% static "img/2.jpg" %}" height="500" alt="Third slide"/>
+      <img class="d-block w-100" src="{% static 'img/2.jpg' %}" height="500" alt="Third slide"/>
         <div class="carousel-caption d-none d-md-block">
     <h5>Authors</h5>
     <p>Find and follow your favoutiate authors</p>
@@ -44,45 +44,114 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-</div>
 
 <h2>{{ b_number }}</h2>
-
-  <h2>categories</h2>
+<br><br><br>
+  <h2><center>Categories</center></h2>
+<p></p>
+<br><br><br>
+<div class="catindex">
+    {%if categories%}
+  {% for category in categories %}
+        <img src="{{ category.picture.url }}" alt="can't load image" width="160" height="100" class="img-responsive img-circle mt mb">
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  {% endfor%}
+</div>
 <p></p>
   {% for category in categories %}
-      <a href="{%url 'library:CategoryDetail' category.pk%}">{{ category.name}}</a></br>
+    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+     <a href="{%url 'library:CategoryDetail' category.pk%}">{{ category.name}}</a>
+    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   {% endfor%}
-<p></p>
-  <a class="btn btn-outline-warning"href="{% url 'library:CategoryList' %}">See More</a>
-<p></p>
+{%endif%}
 
-  <h2>Authors</h2>
+<br><br>
 <p></p>
-  {% for author in authors%}
-      <a  href="{% url 'library:AuthorDetail' author.pk %}">{{ author.name}}</a>
-      <img src="{{ author.picture.url }}" alt="can't load image" width="160" height="100" class="img-responsive img-circle mt mb">
-  {% endfor %}
+  <a class="btn btn-outline-warning seemore" href="{% url 'library:CategoryList' %}">See More</a>
 <p></p>
-  <a  class="btn btn-outline-warning" href="{% url 'library:AuthorList' %}">See More</a>
+<br><br><br>
+  <h2><center>Authors</center></h2>
 <p></p>
-  <h2>Recently added books</h2>
-<p></p>
-  {% for book in books%}
-      <a href="{% url 'library:BookDetail' book.pk %}">{{ book.name}}</a>
-      <img src="{{ book.picture.url }}" alt="can't load image" width="160" height="100"  class="img-responsive img-circle mt mb">
-  {% endfor %}
-<p></p>
-  <a class="btn btn-outline-warning" href="{% url 'library:BookList' %}">See More</a>
-<p></p>
-  <h2>Funy Facts</h2>
-<a class="btn btn-outline-warning"><img src="{% static "img/bb.png" %}" height="70" width="70"/><label>{{book_no}}</label> </a>
-  <a class="btn btn-outline-warning"><img src="{% static "img/images (2).jpg" %}" height="70" width="70"/><label>Authors number:{{author_no}}</label> </a>
-<a class="btn btn-outline-warning"><img src="{% static "img/bb.png" %}" height="70" width="70"/><label>categories number: {{category_no}}</label></a>
-<a class="btn btn-outline-warning"><img src="{% static "img/bb.png" %}" height="70" width="70"/><label>Active users now:{{active_user}}</a></label></a>
-<pre>
+<br><br><br>
+<div class="catindex">
+    {%if authors%}
+      {% for author in authors%}
+          <img src="{{ author.picture.url }}" alt="can't load image" width="200" height="150" class="img-responsive img-circle mt mb">
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+      {% endfor %}
+    </div>
+    <p></p>
+      {% for author in authors%}
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+          <a  href="{% url 'library:AuthorDetail' author.pk %}">{{ author.name}}</a>
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
+      {% endfor %}
+    {%endif%}
+<br><br>
+<p></p>
+  <a  class="btn btn-outline-warning seemore" href="{% url 'library:AuthorList' %}">See More</a>
+<p></p>
+<br><br><br>
+<h2><center>Recently added books.</center></h2>
+<br><br><br>
+<p></p>
+<div class="catindex">
+    {%if books%}
+      {% for book in books%}
+          <img src="{{ book.picture.url }}" alt="can't load image" width="200" height="150"  class="img-responsive img-circle mt mb">
+      &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+      {% endfor %}
+      </div>
+      <p></p>
+      {% for book in books%}
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+          <a href="{% url 'library:BookDetail' book.pk %}">{{ book.name}}</a>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      {% endfor %}
+    {%endif%}
 
-</pre>
+<br><br>
+<p></p>
+  <a class="btn btn-outline-warning seemore" href="{% url 'library:BookList' %}">See More</a>
+<p></p>
+<br><br><br>
+
+<h2><center>Funny Facts.</center></h2>
+<br><br><br>
+<figure class="figure1">
+    <img src="{% static 'img/book.png' %}"  height="150" width="150" style="margin-left: 100px;"/>
+    <img src="{% static 'img/feather.png' %}" height="150" width="150" style="margin-left: 200px;"/>
+    <img src="{% static 'img/theater.png' %}" height="150" width="150" style="margin-left: 200px;"/>
+    <img src="{% static 'img/reading.png' %}" height="150" width="150" style="margin-left: 200px;"/>
+    <img src="{% static 'img/user.png' %}" height="150" width="150" style="margin-left: 200px;"/>
+    <br><br>
+    <div class="caption">
+        <div class="book">
+            Books<br><br>
+            <div>{{book_no}}</div>
+        </div>
+        <div class="author">
+            Authors<br><br>
+            <div>{{author_no}}</div>
+        </div>
+        <div class="category">
+            Categories<br><br>
+            <div>{{category_no}}</div>
+        </div>
+        <div class="reader">
+            Readers<br><br>
+            <div>{{active_user}}</div>
+        </div>
+        <div class="user">
+            Users<br><br>
+            <div>{{users}}</div>
+        </div>
+    </div>
+</figure>
+
 {% endblock %}
 

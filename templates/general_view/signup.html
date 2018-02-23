@@ -1,29 +1,36 @@
 {% extends 'general_view/base.html' %}
 
 {% block content %}
-<div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-  <h2>Sign up</h2>
-          </div>
-  <form action="." method="post" accept-charset="utf-8" enctype="multipart/form-data">
-    {% csrf_token %}
-    {% for field in form %}
-<div class="row">
-        <div class="col-lg-4">
-        <p> {{ field.label_tag }}</p> <br>
 
-  </div>
-    <div class="col-lg-8">
-    <label  > {{ field }}</label></br>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <br><br>
+            <center><h2>Sign up</h2></center>
+            <br><br><br><br>
+        </div>
+        <div class="signup">
+            <form action="." method="post" accept-charset="utf-8" enctype="multipart/form-data">
+                {% csrf_token %}
+                {% for field in form %}
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <p> {{ field.label_tag }}</p><br>
+                        </div>
+                        <div class="col-lg-8">
+                            <label  > {{ field }}</label><br>
+                        </div>
+                    </div>
+                {% for error in field.errors %}
+                  <p style="color: red">{{ error }}</p>
+                {% endfor %}
+                {% endfor %}
+                <br><br>
+                <button type="submit" class="btn btn-outline-warning signupbtn">Register</button>
+                <p></p>
+            </form>
+        </div>
     </div>
 </div>
-
-
-    {% endfor %}
-    <button type="submit" class="btn btn-outline-warning">Sign up</button>
-    <p></p>
-  </form>
-        </div>
-</div>
+<br><br><br><br>
 {% endblock %}

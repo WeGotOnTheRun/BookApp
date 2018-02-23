@@ -1,12 +1,17 @@
 {% extends 'general_view/base.html' %}
-
 {% block title %}Login{% endblock %}
-
 {% block content %}
-<h2>Login</h2>
-<form method="post">
-  {% csrf_token %}
-  {{ form.as_p }}
-  <button type="submit">Login</button>
+<br><br>
+<center><h2>Login</h2></center>
+<br><br><br><br>
+<div class="form">
+  <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <br><br>
+      <button class="btn btn-outline-warning login" type="submit">Login</button>
 </form>
+</div>
+<br><br><br><br>
+
 {% endblock %}

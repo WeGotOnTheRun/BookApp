@@ -19,35 +19,36 @@
   </head>
   <body>
   <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
-  <a class="navbar-brand" href="{% url 'library:index' %}"><img src="{% static "img/3.PNG" %}" width="70" height="70"/></a>
+  <a class="navbar-brand" href="{% url 'library:index' %}"><img src="{% static 'img/3.PNG' %}" width="70" height="70"/></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="{% url 'library:AuthorList' %}">Athoures <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'library:CategoryList' %}">Categories</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'library:BookList' %}">Books</a>
-      </li>
+        <li class="nav-item active">
+            <a class="nav-link" href="{% url 'library:AuthorList' %}">Authors <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'library:CategoryList' %}">Categories</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'library:BookList' %}">Books</a>
+        </li>
+        {% if user.is_authenticated %}
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'community:home' %}">Community</a>
+            </li>
+        {% endif %}
     </ul>
 
     <form class="form-inline my-2 my-lg-0" action="{% url 'user:search' %}" method="get" accept-charset="utf-8" >
 
       {% if user.is_authenticated %}
-       <a href="{% url 'user:home' %}"> Profile</a>
-
         <input class="form-control mr-sm-2" type="text"  placeholder="Search" aria-label="Search" name="search">
-      <button class="btn btn-outline-warning" type="submit">Search</button>/
+        <button class="btn btn-outline-warning" type="submit">Search</button>/
+        <a class="btn btn-outline-warning" href="{% url 'user:home' %}"> Profile</a>
         <a class="btn btn-outline-warning" href="{% url 'logout' %}">logout</a>
-                <a href="{% url 'community:home' %}">community</a>
-
       {% else %}
         <a  class="btn btn-outline-warning" href="{% url 'login' %}">login</a> /
         <a  class="btn btn-outline-warning" href="{% url 'user:signup' %}">signup</a>
@@ -59,6 +60,7 @@
       {% block content %}
       {% endblock %}
     </main>
+  <br><br><br><br>
   <section class="footer">
       <div class="container">
         <div class="row">
@@ -67,7 +69,7 @@
             </div>
 
             <div class="col-lg-6">
-                <h4 class="text-center">contact us</h4>
+                <h4 class="text-center">Contact Us.</h4>
             </div>
 
         </div>
