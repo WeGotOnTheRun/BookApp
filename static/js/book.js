@@ -72,4 +72,4 @@ $(function() {
             $(this).siblings().add(this).filter('.rating').addClass('on');
           }
         );
-      });
+});

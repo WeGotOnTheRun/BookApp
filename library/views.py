@@ -14,6 +14,7 @@ from django.db.models import Q
 from helper import db_helper
 
 
+
 def get_picture(request):
     user = request.user
     return user
@@ -75,7 +76,6 @@ class BookDetailView(DetailView):
         return ctx
 
 
-
 class AuthorListView(ListView):
     model = Author
     template_name = 'library_view/author_list.html'
@@ -109,8 +109,6 @@ class CategoryDetailView(DetailView):
     def get_context_data(self, **kwargs):
         context = super(CategoryDetailView, self).get_context_data(**kwargs)
         context['categoryBooks'] = Book.objects.filter(Category=self.kwargs['pk'])
-        context['isFav']=FavouriteCategory.objects.filter(user_id=self.request.user.id).values_list('category_id',flat=True)
-     
         return context
 
 
@@ -192,6 +190,7 @@ def read(request):
         pass
     book.wishlist.remove(user)
     return redirect('library:BookList')
+
 
 
 @login_required

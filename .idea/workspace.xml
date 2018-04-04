@@ -1,7 +1,226 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="87d1fe86-bc29-46cc-8778-c9a2018e3188" name="Default" comment="" />
+    <list default="true" id="87d1fe86-bc29-46cc-8778-c9a2018e3188" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/migrations/0002_auto_20180228_1530.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ReaderLibrary" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/library/migrations/0002_category_picture.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/library/migrations/0003_auto_20180216_1418.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/media/book_images/1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/media/book_images/1_1Qj6BlD.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/media/book_images/20374612_1721581461209296_3065740162386126652_n.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/media/book_images/27591196_1922586984442075_1483238959_n.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/media/book_images/27781787_1832278463457349_1154848433_n.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/media/book_images/27781787_1832278463457349_1154848433_n_EUUbLyZ.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/media/book_images/MV5BMTU5OTMwNDg3Ml5BMl5BanBnXkFtZTcwMzEyMDEzMQ._V1_UX182_CR00182268_AL_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/media/book_images/MV5BMTU5OTMwNDg3Ml5BMl5BanBnXkFtZTcwMzEyMDEzMQ._V1_UX182_CR00182268_AL__Pr9XI1o.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/media/book_images/Screenshot_from_2018-02-14_12-46-42.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/media/book_images/Screenshot_from_2018-02-14_13-14-14.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/media/user_images/Screenshot_from_2018-02-14_13-14-14.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/users/migrations/0002_favourite_books_favouritecategory_newsletter_ratebook_readbook.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/users/migrations/0003_auto_20180215_2304.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/users/migrations/0004_auto_20180216_1849.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/users/migrations/0005_auto_20180216_1849.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/users/migrations/0006_auto_20180216_1943.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/author_images/20374612_1721581461209296_3065740162386126652_n.jpg" afterPath="$PROJECT_DIR$/media/author_images/20374612_1721581461209296_3065740162386126652_n.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/author_images/220px-Cervantes_Jáuregui.jpg" afterPath="$PROJECT_DIR$/media/author_images/220px-Cervantes_Jáuregui.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/author_images/220px-Shakespeare.jpg" afterPath="$PROJECT_DIR$/media/author_images/220px-Shakespeare.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/author_images/220px-Shakespeare_VDO3how.jpg" afterPath="$PROJECT_DIR$/media/author_images/220px-Shakespeare_VDO3how.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/author_images/220px-Shakespeare_tle0hBM.jpg" afterPath="$PROJECT_DIR$/media/author_images/220px-Shakespeare_tle0hBM.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/author_images/27939615_1833044006714128_234725367_n.jpg" afterPath="$PROJECT_DIR$/media/author_images/27939615_1833044006714128_234725367_n.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/author_images/27939615_1833044006714128_234725367_n_CESMBee.jpg" afterPath="$PROJECT_DIR$/media/author_images/27939615_1833044006714128_234725367_n_CESMBee.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/author_images/Carl_Van_Vechten_-_William_Faulkner.jpg" afterPath="$PROJECT_DIR$/media/author_images/Carl_Van_Vechten_-_William_Faulkner.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/author_images/Dickens_Gurney_head.jpg" afterPath="$PROJECT_DIR$/media/author_images/Dickens_Gurney_head.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/author_images/Dickens_Gurney_head_TP45xuf.jpg" afterPath="$PROJECT_DIR$/media/author_images/Dickens_Gurney_head_TP45xuf.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/book_images/200px-Greatexpectations_vol1.jpg" afterPath="$PROJECT_DIR$/media/book_images/200px-Greatexpectations_vol1.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/book_images/220px-Charles_Dickens-A_Christmas_Carol-Cloth-First_Edition_1843.jpg" afterPath="$PROJECT_DIR$/media/book_images/220px-Charles_Dickens-A_Christmas_Carol-Cloth-First_Edition_1843.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/book_images/225px-Thomas_Keene_in_Macbeth_1884_Wikipedia_crop.png" afterPath="$PROJECT_DIR$/media/book_images/225px-Thomas_Keene_in_Macbeth_1884_Wikipedia_crop.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/book_images/27781787_1832278463457349_1154848433_n_oqsOblV.jpg" afterPath="$PROJECT_DIR$/media/book_images/27781787_1832278463457349_1154848433_n_oqsOblV.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/book_images/27939615_1833044006714128_234725367_n.jpg" afterPath="$PROJECT_DIR$/media/book_images/27939615_1833044006714128_234725367_n.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/book_images/27939615_1833044006714128_234725367_n_FT9Tpm5.jpg" afterPath="$PROJECT_DIR$/media/book_images/27939615_1833044006714128_234725367_n_FT9Tpm5.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/book_images/27939615_1833044006714128_234725367_n_mCrYBZY.jpg" afterPath="$PROJECT_DIR$/media/book_images/27939615_1833044006714128_234725367_n_mCrYBZY.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/book_images/56.jpg" afterPath="$PROJECT_DIR$/media/book_images/56.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/book_images/Dickens_Gurney_head.jpg" afterPath="$PROJECT_DIR$/media/book_images/Dickens_Gurney_head.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/book_images/hamlet.jpg" afterPath="$PROJECT_DIR$/media/book_images/hamlet.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/book_images/julius-caesar.jpg" afterPath="$PROJECT_DIR$/media/book_images/julius-caesar.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/category_images/Double-J-Design-Ravenna-3d-Book.ico" afterPath="$PROJECT_DIR$/media/category_images/Double-J-Design-Ravenna-3d-Book.ico" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/category_images/drama.png" afterPath="$PROJECT_DIR$/media/category_images/drama.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/category_images/drama_AyT2MmZ.png" afterPath="$PROJECT_DIR$/media/category_images/drama_AyT2MmZ.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/category_images/horror.png" afterPath="$PROJECT_DIR$/media/category_images/horror.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/category_images/miscellaneous.png" afterPath="$PROJECT_DIR$/media/category_images/miscellaneous.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/category_images/miscellaneous_j0pRlmZ.png" afterPath="$PROJECT_DIR$/media/category_images/miscellaneous_j0pRlmZ.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/user_images/18698457_1560761523942379_4438431654131981161_n.jpg" afterPath="$PROJECT_DIR$/media/user_images/18698457_1560761523942379_4438431654131981161_n.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/user_images/18698457_1560761523942379_4438431654131981161_n_MTMCYFf.jpg" afterPath="$PROJECT_DIR$/media/user_images/18698457_1560761523942379_4438431654131981161_n_MTMCYFf.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/user_images/26993414_949779495172294_357889820909945136_n.jpg" afterPath="$PROJECT_DIR$/media/user_images/26993414_949779495172294_357889820909945136_n.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/user_images/27591196_1922586984442075_1483238959_n.jpg" afterPath="$PROJECT_DIR$/media/user_images/27591196_1922586984442075_1483238959_n.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/user_images/27591196_1922586984442075_1483238959_n_R0BNp7n.jpg" afterPath="$PROJECT_DIR$/media/user_images/27591196_1922586984442075_1483238959_n_R0BNp7n.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/user_images/27591196_1922586984442075_1483238959_n_dDX8hwk.jpg" afterPath="$PROJECT_DIR$/media/user_images/27591196_1922586984442075_1483238959_n_dDX8hwk.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/user_images/27781787_1832278463457349_1154848433_n.jpg" afterPath="$PROJECT_DIR$/media/user_images/27781787_1832278463457349_1154848433_n.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/user_images/27781787_1832278463457349_1154848433_n_2dVbj20.jpg" afterPath="$PROJECT_DIR$/media/user_images/27781787_1832278463457349_1154848433_n_2dVbj20.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/user_images/27781787_1832278463457349_1154848433_n_9UIMzrJ.jpg" afterPath="$PROJECT_DIR$/media/user_images/27781787_1832278463457349_1154848433_n_9UIMzrJ.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/user_images/27781787_1832278463457349_1154848433_n_OAaeohr.jpg" afterPath="$PROJECT_DIR$/media/user_images/27781787_1832278463457349_1154848433_n_OAaeohr.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/user_images/27781787_1832278463457349_1154848433_n_UwJ4nmQ.jpg" afterPath="$PROJECT_DIR$/media/user_images/27781787_1832278463457349_1154848433_n_UwJ4nmQ.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/user_images/27781787_1832278463457349_1154848433_n_skqQdA8.jpg" afterPath="$PROJECT_DIR$/media/user_images/27781787_1832278463457349_1154848433_n_skqQdA8.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/user_images/27848115_1832278423457353_2009646617_n.jpg" afterPath="$PROJECT_DIR$/media/user_images/27848115_1832278423457353_2009646617_n.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/user_images/27848115_1832278423457353_2009646617_n_1fGPj7p.jpg" afterPath="$PROJECT_DIR$/media/user_images/27848115_1832278423457353_2009646617_n_1fGPj7p.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/user_images/27848115_1832278423457353_2009646617_n_G4VpwqY.jpg" afterPath="$PROJECT_DIR$/media/user_images/27848115_1832278423457353_2009646617_n_G4VpwqY.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/user_images/27848115_1832278423457353_2009646617_n_bV7g4jz.jpg" afterPath="$PROJECT_DIR$/media/user_images/27848115_1832278423457353_2009646617_n_bV7g4jz.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/user_images/27848115_1832278423457353_2009646617_n_snp30gy.jpg" afterPath="$PROJECT_DIR$/media/user_images/27848115_1832278423457353_2009646617_n_snp30gy.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/user_images/27848115_1832278423457353_2009646617_n_uTIZdBv.jpg" afterPath="$PROJECT_DIR$/media/user_images/27848115_1832278423457353_2009646617_n_uTIZdBv.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/user_images/27939615_1833044006714128_234725367_n.jpg" afterPath="$PROJECT_DIR$/media/user_images/27939615_1833044006714128_234725367_n.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/user_images/27939615_1833044006714128_234725367_n_2AAhSD5.jpg" afterPath="$PROJECT_DIR$/media/user_images/27939615_1833044006714128_234725367_n_2AAhSD5.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/user_images/27939615_1833044006714128_234725367_n_38qVWjS.jpg" afterPath="$PROJECT_DIR$/media/user_images/27939615_1833044006714128_234725367_n_38qVWjS.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/user_images/27939615_1833044006714128_234725367_n_7Y0YYIm.jpg" afterPath="$PROJECT_DIR$/media/user_images/27939615_1833044006714128_234725367_n_7Y0YYIm.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/user_images/27939615_1833044006714128_234725367_n_I6VlvtN.jpg" afterPath="$PROJECT_DIR$/media/user_images/27939615_1833044006714128_234725367_n_I6VlvtN.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/user_images/27939615_1833044006714128_234725367_n_T3E22qh.jpg" afterPath="$PROJECT_DIR$/media/user_images/27939615_1833044006714128_234725367_n_T3E22qh.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/user_images/27939615_1833044006714128_234725367_n_gLIItKK.jpg" afterPath="$PROJECT_DIR$/media/user_images/27939615_1833044006714128_234725367_n_gLIItKK.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/user_images/27939615_1833044006714128_234725367_n_hs61MYA.jpg" afterPath="$PROJECT_DIR$/media/user_images/27939615_1833044006714128_234725367_n_hs61MYA.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/user_images/27939615_1833044006714128_234725367_n_lJClyBL.jpg" afterPath="$PROJECT_DIR$/media/user_images/27939615_1833044006714128_234725367_n_lJClyBL.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/user_images/27939615_1833044006714128_234725367_n_lLhBudW.jpg" afterPath="$PROJECT_DIR$/media/user_images/27939615_1833044006714128_234725367_n_lLhBudW.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/user_images/Carl_Van_Vechten_-_William_Faulkner.jpg" afterPath="$PROJECT_DIR$/media/user_images/Carl_Van_Vechten_-_William_Faulkner.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/user_images/faulkner.jpg" afterPath="$PROJECT_DIR$/media/user_images/faulkner.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/user_images/if_package_favourite_3547.png" afterPath="$PROJECT_DIR$/media/user_images/if_package_favourite_3547.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/fonts/fa-brands-400.eot" afterPath="$PROJECT_DIR$/static/fonts/fa-brands-400.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/fonts/fa-brands-400.ttf" afterPath="$PROJECT_DIR$/static/fonts/fa-brands-400.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/fonts/fa-brands-400.woff" afterPath="$PROJECT_DIR$/static/fonts/fa-brands-400.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/fonts/fa-brands-400.woff2" afterPath="$PROJECT_DIR$/static/fonts/fa-brands-400.woff2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/fonts/fa-regular-400.eot" afterPath="$PROJECT_DIR$/static/fonts/fa-regular-400.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/fonts/fa-regular-400.ttf" afterPath="$PROJECT_DIR$/static/fonts/fa-regular-400.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/fonts/fa-regular-400.woff" afterPath="$PROJECT_DIR$/static/fonts/fa-regular-400.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/fonts/fa-regular-400.woff2" afterPath="$PROJECT_DIR$/static/fonts/fa-regular-400.woff2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/fonts/fa-solid-900.eot" afterPath="$PROJECT_DIR$/static/fonts/fa-solid-900.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/fonts/fa-solid-900.ttf" afterPath="$PROJECT_DIR$/static/fonts/fa-solid-900.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/fonts/fa-solid-900.woff" afterPath="$PROJECT_DIR$/static/fonts/fa-solid-900.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/fonts/fa-solid-900.woff2" afterPath="$PROJECT_DIR$/static/fonts/fa-solid-900.woff2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/fonts/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/static/fonts/glyphicons-halflings-regular.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/static/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/static/fonts/glyphicons-halflings-regular.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/fonts/glyphicons-halflings-regular.woff2" afterPath="$PROJECT_DIR$/static/fonts/glyphicons-halflings-regular.woff2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/1 (1).jpg" afterPath="$PROJECT_DIR$/static/img/1 (1).jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/1.jpg" afterPath="$PROJECT_DIR$/static/img/1.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/2.jpg" afterPath="$PROJECT_DIR$/static/img/2.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/3.PNG" afterPath="$PROJECT_DIR$/static/img/3.PNG" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/851556_miscellaneous_512x512.png" afterPath="$PROJECT_DIR$/static/img/851556_miscellaneous_512x512.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/Books-and-Butterflies.jpg" afterPath="$PROJECT_DIR$/static/img/Books-and-Butterflies.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/Empty-Heart.png" afterPath="$PROJECT_DIR$/static/img/Empty-Heart.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/Empty-Heart.png.png" afterPath="$PROJECT_DIR$/static/img/Empty-Heart.png.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/Library-Books.jpg" afterPath="$PROJECT_DIR$/static/img/Library-Books.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/RedHeart.png" afterPath="$PROJECT_DIR$/static/img/RedHeart.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/Writer-Icon-Image.png" afterPath="$PROJECT_DIR$/static/img/Writer-Icon-Image.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/author.png" afterPath="$PROJECT_DIR$/static/img/author.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/bb.png" afterPath="$PROJECT_DIR$/static/img/bb.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/book.png" afterPath="$PROJECT_DIR$/static/img/book.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/error.png" afterPath="$PROJECT_DIR$/static/img/error.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/feather.png" afterPath="$PROJECT_DIR$/static/img/feather.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/hit.png" afterPath="$PROJECT_DIR$/static/img/hit.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/images (1).jpg" afterPath="$PROJECT_DIR$/static/img/images (1).jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/images (2).jpg" afterPath="$PROJECT_DIR$/static/img/images (2).jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/images.jpg" afterPath="$PROJECT_DIR$/static/img/images.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/maxresdefault.jpg" afterPath="$PROJECT_DIR$/static/img/maxresdefault.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/read.png" afterPath="$PROJECT_DIR$/static/img/read.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/reader.png" afterPath="$PROJECT_DIR$/static/img/reader.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/reading.png" afterPath="$PROJECT_DIR$/static/img/reading.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/sad.png" afterPath="$PROJECT_DIR$/static/img/sad.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/spellbook_05_hd_pictures_168363.jpg" afterPath="$PROJECT_DIR$/static/img/spellbook_05_hd_pictures_168363.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/theater.png" afterPath="$PROJECT_DIR$/static/img/theater.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/thumb-1920-389875.jpg" afterPath="$PROJECT_DIR$/static/img/thumb-1920-389875.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/user.png" afterPath="$PROJECT_DIR$/static/img/user.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/users.png" afterPath="$PROJECT_DIR$/static/img/users.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/yellow.png" afterPath="$PROJECT_DIR$/static/img/yellow.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/django1.iml" afterPath="$PROJECT_DIR$/.idea/django1.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Countries.txt" afterPath="$PROJECT_DIR$/Countries.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/community/__init__.py" afterPath="$PROJECT_DIR$/community/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/community/admin.py" afterPath="$PROJECT_DIR$/community/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/community/apps.py" afterPath="$PROJECT_DIR$/community/apps.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/community/forms.py" afterPath="$PROJECT_DIR$/community/forms.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/community/migrations/0001_initial.py" afterPath="$PROJECT_DIR$/community/migrations/0001_initial.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/community/migrations/0002_answer.py" afterPath="$PROJECT_DIR$/community/migrations/0002_answer.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/community/migrations/__init__.py" afterPath="$PROJECT_DIR$/community/migrations/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/community/models.py" afterPath="$PROJECT_DIR$/community/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/community/tests.py" afterPath="$PROJECT_DIR$/community/tests.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/community/urls.py" afterPath="$PROJECT_DIR$/community/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/community/views.py" afterPath="$PROJECT_DIR$/community/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/django1/.idea/django1.iml" afterPath="$PROJECT_DIR$/django1/.idea/django1.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/django1/.idea/misc.xml" afterPath="$PROJECT_DIR$/django1/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/django1/.idea/modules.xml" afterPath="$PROJECT_DIR$/django1/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/django1/.idea/workspace.xml" afterPath="$PROJECT_DIR$/django1/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/django1/__init__.py" afterPath="$PROJECT_DIR$/django1/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/django1/settings.py" afterPath="$PROJECT_DIR$/django1/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/django1/urls.py" afterPath="$PROJECT_DIR$/django1/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/django1/wsgi.py" afterPath="$PROJECT_DIR$/django1/wsgi.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/helper/db_helper.py" afterPath="$PROJECT_DIR$/helper/db_helper.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library.sql" afterPath="$PROJECT_DIR$/library.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/__init__.py" afterPath="$PROJECT_DIR$/library/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/admin.py" afterPath="$PROJECT_DIR$/library/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/apps.py" afterPath="$PROJECT_DIR$/library/apps.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/migrations/0001_initial.py" afterPath="$PROJECT_DIR$/library/migrations/0001_initial.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/migrations/__init__.py" afterPath="$PROJECT_DIR$/library/migrations/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/models.py" afterPath="$PROJECT_DIR$/library/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/tests.py" afterPath="$PROJECT_DIR$/library/tests.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/urls.py" afterPath="$PROJECT_DIR$/library/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/views.py" afterPath="$PROJECT_DIR$/library/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/manage.py" afterPath="$PROJECT_DIR$/manage.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nano.save" afterPath="$PROJECT_DIR$/nano.save" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/bootstrap.css" afterPath="$PROJECT_DIR$/static/css/bootstrap.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/static/css/bootstrap.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fontawesome-all.css" afterPath="$PROJECT_DIR$/static/css/fontawesome-all.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fontawesome-all.min.css" afterPath="$PROJECT_DIR$/static/css/fontawesome-all.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fontawesome.css" afterPath="$PROJECT_DIR$/static/css/fontawesome.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fontawesome.min.css" afterPath="$PROJECT_DIR$/static/css/fontawesome.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/list.css" afterPath="$PROJECT_DIR$/static/css/list.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/rtl.css" afterPath="$PROJECT_DIR$/static/css/rtl.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/style.css" afterPath="$PROJECT_DIR$/static/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/fonts/fa-brands-400.svg" afterPath="$PROJECT_DIR$/static/fonts/fa-brands-400.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/fonts/fa-regular-400.svg" afterPath="$PROJECT_DIR$/static/fonts/fa-regular-400.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/fonts/fa-solid-900.svg" afterPath="$PROJECT_DIR$/static/fonts/fa-solid-900.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/static/fonts/glyphicons-halflings-regular.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/book.js" afterPath="$PROJECT_DIR$/static/js/book.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/bootstrap.bundle.js" afterPath="$PROJECT_DIR$/static/js/bootstrap.bundle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/bootstrap.bundle.js.map" afterPath="$PROJECT_DIR$/static/js/bootstrap.bundle.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/bootstrap.bundle.min.js" afterPath="$PROJECT_DIR$/static/js/bootstrap.bundle.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/bootstrap.bundle.min.js.map" afterPath="$PROJECT_DIR$/static/js/bootstrap.bundle.min.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/bootstrap.js" afterPath="$PROJECT_DIR$/static/js/bootstrap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/bootstrap.js.map" afterPath="$PROJECT_DIR$/static/js/bootstrap.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/static/js/bootstrap.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/bootstrap.min.js.map" afterPath="$PROJECT_DIR$/static/js/bootstrap.min.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/category.js" afterPath="$PROJECT_DIR$/static/js/category.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/jquery-1.4.2.min.js" afterPath="$PROJECT_DIR$/static/js/jquery-1.4.2.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/jquery-3.3.1.js" afterPath="$PROJECT_DIR$/static/js/jquery-3.3.1.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/jquery-3.3.1.min.js" afterPath="$PROJECT_DIR$/static/js/jquery-3.3.1.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/jquery.min.js" afterPath="$PROJECT_DIR$/static/js/jquery.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/respond.min.js" afterPath="$PROJECT_DIR$/static/js/respond.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/community_view/index.html" afterPath="$PROJECT_DIR$/templates/community_view/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/general_view/404.html" afterPath="$PROJECT_DIR$/templates/general_view/404.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/general_view/base.html" afterPath="$PROJECT_DIR$/templates/general_view/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/general_view/home.html" afterPath="$PROJECT_DIR$/templates/general_view/home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/general_view/signup.html" afterPath="$PROJECT_DIR$/templates/general_view/signup.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/library_view/author_detail.html" afterPath="$PROJECT_DIR$/templates/library_view/author_detail.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/library_view/author_list.html" afterPath="$PROJECT_DIR$/templates/library_view/author_list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/library_view/book_detail.html" afterPath="$PROJECT_DIR$/templates/library_view/book_detail.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/library_view/book_list.html" afterPath="$PROJECT_DIR$/templates/library_view/book_list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/library_view/category_detail.html" afterPath="$PROJECT_DIR$/templates/library_view/category_detail.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/library_view/category_list.html" afterPath="$PROJECT_DIR$/templates/library_view/category_list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/library_view/index.html" afterPath="$PROJECT_DIR$/templates/library_view/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/library_view/search.html" afterPath="$PROJECT_DIR$/templates/library_view/search.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/registration/login.html" afterPath="$PROJECT_DIR$/templates/registration/login.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/user_view/profile.html" afterPath="$PROJECT_DIR$/templates/user_view/profile.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/user_view/users.html" afterPath="$PROJECT_DIR$/templates/user_view/users.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/users/__init__.py" afterPath="$PROJECT_DIR$/users/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/users/admin.py" afterPath="$PROJECT_DIR$/users/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/users/apps.py" afterPath="$PROJECT_DIR$/users/apps.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/users/forms.py" afterPath="$PROJECT_DIR$/users/forms.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/users/migrations/0001_initial.py" afterPath="$PROJECT_DIR$/users/migrations/0001_initial.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/users/migrations/__init__.py" afterPath="$PROJECT_DIR$/users/migrations/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/users/models.py" afterPath="$PROJECT_DIR$/users/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/users/tests.py" afterPath="$PROJECT_DIR$/users/tests.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/users/urls.py" afterPath="$PROJECT_DIR$/users/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/users/views.py" afterPath="$PROJECT_DIR$/users/views.py" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,18 +237,38 @@
       <file leaf-file-name="book_detail.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/library_view/book_detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
-              <caret line="116" column="5" lean-forward="false" selection-start-line="116" selection-start-column="5" selection-end-line="116" selection-end-column="5" />
+            <state relative-caret-position="26">
+              <caret line="46" column="1" lean-forward="false" selection-start-line="46" selection-start-column="1" selection-end-line="46" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/django1/settings.py">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/library/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="728">
-              <caret line="28" column="12" lean-forward="false" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
+            <state relative-caret-position="6084">
+              <caret line="247" column="0" lean-forward="false" selection-start-line="247" selection-start-column="0" selection-end-line="247" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/community_view/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3042">
+              <caret line="117" column="14" lean-forward="false" selection-start-line="117" selection-start-column="14" selection-end-line="117" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/general_view/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1066">
+              <caret line="41" column="19" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -54,6 +293,8 @@
       <find>picture</find>
       <find>sty</find>
       <find>drop</find>
+      <find>sear</find>
+      <find>endblock</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -73,13 +314,10 @@
         <option value="$PROJECT_DIR$/templates/library_view/categories.html" />
         <option value="$PROJECT_DIR$/users/forms.py" />
         <option value="$PROJECT_DIR$/helper/db_helper.py" />
-        <option value="$PROJECT_DIR$/users/admin.py" />
-        <option value="$PROJECT_DIR$/django1/urls.py" />
         <option value="$PROJECT_DIR$/community/urls.py" />
         <option value="$PROJECT_DIR$/community/forms.py" />
         <option value="$PROJECT_DIR$/community/admin.py" />
         <option value="$PROJECT_DIR$/community/models.py" />
-        <option value="$PROJECT_DIR$/users/urls.py" />
         <option value="$PROJECT_DIR$/community/views.py" />
         <option value="$PROJECT_DIR$/library/admin.py" />
         <option value="$PROJECT_DIR$/templates/general_view/signup.html" />
@@ -87,28 +325,37 @@
         <option value="$PROJECT_DIR$/templates/user_view/users.html" />
         <option value="$PROJECT_DIR$/templates/user_view/profile.html" />
         <option value="$PROJECT_DIR$/templates/general_view/404.html" />
-        <option value="$PROJECT_DIR$/templates/general_view/base.html" />
-        <option value="$PROJECT_DIR$/library/models.py" />
-        <option value="$PROJECT_DIR$/users/models.py" />
-        <option value="$PROJECT_DIR$/templates/community_view/index.html" />
-        <option value="$PROJECT_DIR$/templates/library_view/book_list.html" />
         <option value="$PROJECT_DIR$/templates/library_view/category_list.html" />
-        <option value="$PROJECT_DIR$/templates/library_view/index.html" />
         <option value="$PROJECT_DIR$/templates/library_view/author_list.html" />
-        <option value="$PROJECT_DIR$/users/views.py" />
         <option value="$PROJECT_DIR$/templates/general_view/home.html" />
-        <option value="$PROJECT_DIR$/templates/library_view/category_detail.html" />
         <option value="$PROJECT_DIR$/templates/library_view/author_detail.html" />
         <option value="$PROJECT_DIR$/library/urls.py" />
-        <option value="$PROJECT_DIR$/static/css/style.css" />
+        <option value="$PROJECT_DIR$/django1/urls.py" />
         <option value="$PROJECT_DIR$/library/views.py" />
+        <option value="$PROJECT_DIR$/users/admin.py" />
+        <option value="$PROJECT_DIR$/library/models.py" />
+        <option value="$PROJECT_DIR$/users/models.py" />
+        <option value="$PROJECT_DIR$/templates/library_view/category_detail.html" />
+        <option value="$PROJECT_DIR$/users/urls.py" />
+        <option value="$PROJECT_DIR$/users/views.py" />
+        <option value="$PROJECT_DIR$/templates/library_view/search.html" />
         <option value="$PROJECT_DIR$/django1/settings.py" />
+        <option value="$PROJECT_DIR$/library/migrations/0002_auto_20180228_1530.py" />
+        <option value="$PROJECT_DIR$/static/css/style.css" />
+        <option value="$PROJECT_DIR$/templates/library_view/index.html" />
+        <option value="$PROJECT_DIR$/static/js/book.js" />
+        <option value="$PROJECT_DIR$/static/js/jquery.min.js" />
+        <option value="$PROJECT_DIR$/static/js/jquery-1.4.2.min.js" />
+        <option value="$PROJECT_DIR$/static/js/category.js" />
         <option value="$PROJECT_DIR$/templates/library_view/book_detail.html" />
+        <option value="$PROJECT_DIR$/templates/library_view/book_list.html" />
+        <option value="$PROJECT_DIR$/templates/general_view/base.html" />
+        <option value="$PROJECT_DIR$/templates/community_view/index.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="65" />
+    <option name="x" value="106" />
     <option name="y" value="52" />
     <option name="width" value="1855" />
     <option name="height" value="1028" />
@@ -128,6 +375,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -183,17 +431,48 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="django1" />
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BookApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BookApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BookApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BookApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="community" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../pm_10:45/BookApp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SearchEverywhereHistoryKey" value="registration/login.html&#9;null&#9;null" />
@@ -400,16 +679,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="52" width="1855" height="1028" extended-state="0" />
+    <frame x="106" y="52" width="1855" height="1028" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16866812" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2682927" sideWeight="0.27183408" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2682927" sideWeight="0.29093885" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19527897" sideWeight="0.8286026" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2682927" sideWeight="0.7281659" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2682927" sideWeight="0.70906115" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -437,144 +716,15 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="5" />
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/library_view/books.html" />
-    <entry file="file://$PROJECT_DIR$/Countries.txt">
+    <entry file="file://$PROJECT_DIR$/templates/library_view/author_list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="51" column="12" lean-forward="true" selection-start-line="51" selection-start-column="12" selection-end-line="51" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/^C" />
-    <entry file="file://$PROJECT_DIR$/xx" />
-    <entry file="file://$PROJECT_DIR$/community/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/community/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/users/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/community/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="23" column="17" lean-forward="false" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/community/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="91" column="15" lean-forward="true" selection-start-line="91" selection-start-column="15" selection-end-line="91" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/users/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/django1/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/rtl.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/list.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/fontawesome-all.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/fontawesome-all.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="577">
-          <caret line="119" column="0" lean-forward="true" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/img/category.png" />
-    <entry file="file://$PROJECT_DIR$/templates/general_view/404.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="7" column="35" lean-forward="false" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/general_view/signup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="28" column="68" lean-forward="true" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/media/author_images/Screenshot_from_2018-02-14_12-46-42.png" />
-    <entry file="file://$PROJECT_DIR$/media/category_images/miscellaneous.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/helper/db_helper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="9" column="8" lean-forward="true" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+        <state relative-caret-position="87">
+          <caret line="16" column="18" lean-forward="true" selection-start-line="16" selection-start-column="18" selection-end-line="17" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -585,90 +735,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/community/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="21" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/users/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="28" column="21" lean-forward="false" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/community_view/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="81" column="24" lean-forward="false" selection-start-line="81" selection-start-column="24" selection-end-line="81" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/users/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="11" column="28" lean-forward="false" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/library_view/book_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="24" column="72" lean-forward="false" selection-start-line="24" selection-start-column="72" selection-end-line="24" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/library_view/category_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="26" column="72" lean-forward="false" selection-start-line="26" selection-start-column="72" selection-end-line="26" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="577">
-          <caret line="64" column="20" lean-forward="true" selection-start-line="64" selection-start-column="20" selection-end-line="64" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/general_view/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="54" column="14" lean-forward="true" selection-start-line="54" selection-start-column="14" selection-end-line="54" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/user_view/profile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="16" column="8" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/library_view/author_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="16" column="18" lean-forward="true" selection-start-line="16" selection-start-column="18" selection-end-line="17" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/library_view/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="56" column="8" lean-forward="false" selection-start-line="56" selection-start-column="8" selection-end-line="57" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/user_view/users.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="416">
@@ -676,87 +742,298 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/general_view/home.html">
+    <entry file="file://$PROJECT_DIR$/users/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="154" column="52" lean-forward="false" selection-start-line="154" selection-start-column="52" selection-end-line="154" selection-end-column="52" />
+        <state relative-caret-position="54">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/img/1 (1).jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/img/1.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/img/2.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/img/3.PNG">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/library_view/category_detail.html">
+    <entry file="file://$PROJECT_DIR$/templates/general_view/404.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="43" selection-end-column="11" />
+        <state relative-caret-position="260">
+          <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/library_view/author_detail.html">
+    <entry file="file://$PROJECT_DIR$/library/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="63" column="9" lean-forward="true" selection-start-line="63" selection-start-column="9" selection-end-line="63" selection-end-column="9" />
+        <state relative-caret-position="578">
+          <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/library/urls.py">
+    <entry file="file://$PROJECT_DIR$/users/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="30" column="24" lean-forward="false" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
+        <state relative-caret-position="74">
+          <caret line="5" column="28" lean-forward="false" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="12" column="4" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/users/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="79" column="36" lean-forward="true" selection-start-line="78" selection-start-column="8" selection-end-line="79" selection-end-column="36" />
+        <state relative-caret-position="345">
+          <caret line="58" column="0" lean-forward="true" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/style.css">
+    <entry file="file://$PROJECT_DIR$/templates/library_view/category_list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="124" column="23" lean-forward="false" selection-start-line="124" selection-start-column="23" selection-end-line="124" selection-end-column="23" />
+        <state relative-caret-position="292">
+          <caret line="15" column="31" lean-forward="true" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/library/views.py">
+    <entry file="file://$PROJECT_DIR$/templates/user_view/profile.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="215" column="10" lean-forward="true" selection-start-line="215" selection-start-column="10" selection-end-line="215" selection-end-column="10" />
+        <state relative-caret-position="260">
+          <caret line="10" column="35" lean-forward="true" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/book_images/56.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/book_images/200px-Greatexpectations_vol1.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/book_images/220px-Charles_Dickens-A_Christmas_Carol-Cloth-First_Edition_1843.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/book_images/225px-Thomas_Keene_in_Macbeth_1884_Wikipedia_crop.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/book_images/27939615_1833044006714128_234725367_n.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/book_images/27939615_1833044006714128_234725367_n_FT9Tpm5.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/book_images/27939615_1833044006714128_234725367_n_mCrYBZY.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/book_images/Dickens_Gurney_head.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/book_images/hamlet.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/book_images/x.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/book_images/you.PNG">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/category_images/opponent.PNG">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/category_images/miscellaneous_j0pRlmZ.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/category_images/miscellaneous.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/category_images/horror.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/category_images/drama_AyT2MmZ.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/category_images/drama.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/category_images/Double-J-Design-Ravenna-3d-Book.ico">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/book_images/julius-caesar.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/library_view/search.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="11" column="186" lean-forward="false" selection-start-line="11" selection-start-column="186" selection-end-line="11" selection-end-column="186" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/migrations/0001_initial.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-644">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/migrations/0002_auto_20180228_1530.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="105" column="10" lean-forward="true" selection-start-line="105" selection-start-column="10" selection-end-line="110" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/django1/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="728">
-          <caret line="28" column="12" lean-forward="false" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
+        <state relative-caret-position="288">
+          <caret line="92" column="0" lean-forward="true" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/general_view/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="123" column="14" lean-forward="true" selection-start-line="123" selection-start-column="14" selection-end-line="123" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users/migrations/0002_auto_20180228_1530.py" />
+    <entry file="file://$PROJECT_DIR$/templates/library_view/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="55" column="34" lean-forward="false" selection-start-line="55" selection-start-column="34" selection-end-line="55" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="77" column="18" lean-forward="false" selection-start-line="77" selection-start-column="18" selection-end-line="77" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/library_view/author_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="1" column="22" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/jquery-3.3.1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-24666">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/book.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1924">
+          <caret line="74" column="3" lean-forward="false" selection-start-line="74" selection-start-column="3" selection-end-line="74" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/jquery.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="3" column="31772" lean-forward="false" selection-start-line="3" selection-start-column="31772" selection-end-line="3" selection-end-column="31772" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/jquery-1.4.2.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/library_view/book_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="18" column="20" lean-forward="false" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6084">
+          <caret line="247" column="0" lean-forward="false" selection-start-line="247" selection-start-column="0" selection-end-line="247" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/general_view/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1066">
+          <caret line="41" column="19" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/community_view/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3042">
+          <caret line="117" column="14" lean-forward="false" selection-start-line="117" selection-start-column="14" selection-end-line="117" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/category.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="21" column="3" lean-forward="false" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/library_view/category_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1274">
+          <caret line="49" column="34" lean-forward="false" selection-start-line="49" selection-start-column="26" selection-end-line="49" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/library_view/book_detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="116" column="5" lean-forward="false" selection-start-line="116" selection-start-column="5" selection-end-line="116" selection-end-column="5" />
+        <state relative-caret-position="26">
+          <caret line="46" column="1" lean-forward="false" selection-start-line="46" selection-start-column="1" selection-end-line="46" selection-end-column="1" />
           <folding />
         </state>
       </provider>

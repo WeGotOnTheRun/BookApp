@@ -62,7 +62,7 @@ class Book(models.Model):
         db_table = 'Book'
 
     def __str__(self):
-        return str(self.book_id)
+        return self.name
 
 
 @python_2_unicode_compatible
@@ -85,3 +85,5 @@ class wish_list(models.Model):
     class Meta:
         db_table = 'wish_list'
         unique_together = (('user', 'book'),)
+
+

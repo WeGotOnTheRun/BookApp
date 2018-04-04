@@ -27,8 +27,8 @@
       {% for question in questions %}
       <div class="panel-heading">
         <div class="col-md-2">
-              {% if question.user.is_superuser %}
-            <p>Admin</p>
+            {% if question.user.is_superuser %}
+                <p>Admin</p>
             {%else%}
             {% if user.get_username == question.user.username %}
             <a href="{% url 'user:home' %}">
@@ -40,6 +40,7 @@
             </a>
             {% endif %}
             {% endif %}
+
         </div>
         <div class="media-body">
           <h4 class="media-heading">{{ question.user.username}}</h4>
@@ -69,7 +70,7 @@
         <li class="media">
           <div class="col-md-2">
               {% if answer.user.is_superuser %}
-            <p>Admin</p>
+                 <p>Admin</p>
             {%else%}
             {% if user.get_username == question.user.username %}
             <a href="{% url 'user:home' %}">
@@ -78,9 +79,13 @@
             {% else %}
             <a href="{% url 'user:profile'  answer.user.username %}">
                 <img src="{{ answer.user.profile.picture.url }}" alt="can't load image" width="160" height="170" class="img-responsive img-circle mt mb">
-            </a>
+            <a href="{% url 'user:profile' question.user.username %}">
+            <img alt="" src="{{ question.user.profile.picture.url }}" class="media-object img-responsive">
+
+            </a></a>
               {% endif %}
               {% endif %}
+
           </div>
           <div class="media-body">
             <h4 class="media-heading">{{ answer.user.username }} <small>{{ answer.posted_time }}</small></h4>

@@ -1,7 +1,7 @@
-from django.urls import path, re_path,include
+from django.urls import path, re_path
 from . import views
+
 app_name = 'library'
-from django.contrib.auth.decorators import login_required
 
 urlpatterns = [
     path('', views.index, name='index'),
@@ -29,5 +29,6 @@ urlpatterns = [
     path('unread/', views.deleteRead, name='deleteRead'),
     re_path(r'^favCat', views.favCat, name='favCat'),
     re_path(r'^delCat', views.deleteCat, name='delCat'),
+
 
 ]

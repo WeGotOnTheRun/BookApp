@@ -11,4 +11,5 @@ urlpatterns = [
     re_path('logout', view.logout, {'next_page': 'login'}, name='logout'),
     re_path(r'^profile/(?P<Username>\w+)/$', views.profile, name='profile'),  # show other users profile.
     re_path(r'^search', views.search, name='search'),
+
 ]

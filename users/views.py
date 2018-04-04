@@ -14,6 +14,7 @@ from library.models import *
 from django.views.decorators.csrf import csrf_exempt
 
 
+
 def sign_up(request):
     if request.method == 'POST':
         form = SignUp(request.POST, request.FILES)
@@ -50,9 +51,9 @@ def log_in(request):
 
 @csrf_exempt
 def search(request):
-        Text=request.GET.get('search')
+        Text = request.GET.get('search')
         books = Book.objects.filter(Q(name__icontains=Text) |Q(summary__icontains=Text))
-        authors=Author.objects.filter(name__icontains=Text)
+        authors = Author.objects.filter(name__icontains=Text)
         return render(request, 'library_view/search.html', {'books': books, 'authors': authors})
 
 
